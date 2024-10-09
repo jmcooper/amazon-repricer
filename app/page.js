@@ -1,95 +1,52 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from "next/image"
+import styles from "./page.module.css"
+import { getInventoryReport } from "./amazon/seller-api-reports";
+// import { useState } from 'react'
 
-export default function Home() {
+// import { fetchFbaInventorySummaries } from "./amazon/seller-api"
+
+/*
+Amazon App ID: AMAZON_APP_ID
+Seller Central Base URL: SELLER_CENTRAL_BASE_URL
+Vendor Central Base URL: VENDOR_CENTRAL_BASE_URL
+
+
+OAuth
+https://sellercentral.amazon.com/apps/authorize/consent?application_id={your application ID}
+
+*/
+export default async function Home() {
+  const inventoryReport = await getInventoryReport()
+  const filteredSummaries = [];
+  console.log(inventoryReport)
+  // const listings = await fetchFbaInventorySummaries()
+
+  // let filteredSummaries = []
+  // if (listings && listings.payload && listings.payload.inventorySummaries) {
+  //   filteredSummaries = listings.payload.inventorySummaries.filter(s => s.inventoryDetails.fulfillableQuantity > 0)
+  // } else {
+  //   console.error('No inventory data received');
+  // }
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div>
+      <h1>Seller Inventory</h1>
+      {filteredSummaries.length > 0 ? (
+        <ul>
+          {filteredSummaries.map((item, index) => (
+            <li key={index}>
+              <p>ASIN: {item.asin}</p>
+              <p>FNSKU: {item.fnSku}</p>
+              <p>SKU: {item.sellerSku}</p>
+              <p>Title: {item.productName}</p>
+              {/* <p>Price: {item.price ? item.price.amount : 'N/A'}</p>
+              <p>Rank: {item.salesRankings ? item.salesRankings[0]?.rank : 'N/A'}</p> */}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>Loading inventory...</p>
+      )}
     </div>
   );
 }

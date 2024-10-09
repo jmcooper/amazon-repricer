@@ -1,0 +1,501 @@
+sku	fnsku	asin	product-name	condition	your-price	mfn-listing-exists	mfn-fulfillable-quantity	afn-listing-exists	afn-warehouse-quantity	afn-fulfillable-quantity	afn-unsellable-quantity	afn-reserved-quantity	afn-total-quantity	per-unit-volume	afn-inbound-working-quantity	afn-inbound-shipped-quantity	afn-inbound-receiving-quantity	afn-researching-quantity	afn-reserved-future-supply	afn-future-supply-buyable
+001-Bookmine-Amaz-8.7.24-Jim-535	X004CKSVSX	0470673648	Movies and American Society	UsedGood	59.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+001-DeseretIndust-5.25.24-Jim-047	X004970SHL	1631063073	Sally's Cookie Addiction: Irresistible Cookies, Cookie Bars, Shortbread, and More from the Creator of Sally's Baking Addiction (Volume 3) (Sally's Baking Addiction, 3)	UsedGood	20.69	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+001-DeseretIndust-6.1.24-Jim-559	X0049I3CLT	0794826490	Brigham Young University Football Vault: The History of the Cougars	UsedVeryGood	39.75	No		Yes	2	2	0	0	2	0.14	0	0	0	0	0	0
+001-DeseretIndust-6.12.24-Jim-665	X004A08DO7	1587676109	Gwendy's Button Box	UsedGood	17.71	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+001-DeseretIndust-6.13.24-Jim-722	X004A2UMD5	B003AO75AQ	The Work And The Glory Gerald Lund 9 Volume Hardcover Set Vol 1. Pillar of Light 2. Like a Fire is Burning 3. Truth will Prevail 4. Thy Gold To Refine 5. A seson of Joy 6. Praise The Man 7. No Unhallowed Hand 8. So Great a Cause 9. All is Well (The Work And The Glory, Complete 9 Volume set)	UsedGood	68.55	No		Yes	0	0	0	0	0	0.91	0	0	0	0	0	0
+001-DeseretIndust-6.19.24-Jim-444	X004ADPW2Z	0486238253	Travels in Arabia Deserta, Vol. 1	UsedAcceptable	14.09	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+001-DeseretIndust-6.26.24-Jim-025	X004AU181H	0794543790	1000 Animals revised	UsedGood	24.12	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+001-DeseretIndust-6.4.24-Jim-883	X0049M8BKR	B0019T5H4K	New Standard Reference Bible Blue Ribbon Edition: (Authorized or King James Version) School and Library Reference Edition Red Letter Edition Pictorial Pronouncing Dictionary and other Interesting Instructive Features	UsedGood	48.00	No		Yes	1	1	0	0	1	0.17	0	0	0	0	0	0
+001-DeseretIndust-7.12.24-Jim-462	X004BHYGYF	032306969X	Rosai and Ackerman's Surgical Pathology: Expert Consult: Online and Print, 10e (Surgical Pathology (Ackerman's)) - 2 Volume Set	UsedGood	84.47	No		Yes	1	1	0	0	1	0.61	0	0	0	0	0	0
+001-DeseretIndust-7.25.24-Jim-859	X004C26NJP	B000PHBWT6	Children of the Promise, volume 1,2,3,4,5. Rumors of War, Since You Went Away, Far from Home, When We Meet Again, As Long As I Have You [5 volume set]	UsedGood	54.90	No		Yes	0	0	0	0	3	0.28	3	0	0	0	0	0
+001-DeseretIndust-8.19.24-Jim-672	X004D4JROP	1629727091	Witness for His Names	UsedVeryGood	7.44	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+001-NPS-5.21.24-Jim-382	X00490QMFZ	0891414908	Saving the Breakout: The 30th Division's Heroic Stand at Mortain, August 7-12, 1944	UsedAcceptable	17.98	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+001-NPSAuction-5.28.24-Jim-364	X0049B6Q1J	1259948889	Intermediate Algebra Fifth Edition Annotated Instructor's Edition 2018	UsedGood	139.84	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+001-NPSAuction-8.29.24-Jim-781	X004DN6HT9	1319195369	American Government: Stories of a Nation: For the AP Course	UsedVeryGood	121.74	No		Yes	6	0	0	6	6	0.05	0	0	0	0	0	0
+002-Bookmine-Amaz-8.7.24-Jim-416	X004CL2ZQV	0470673648	Movies and American Society	UsedGood	59.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+002-DeseretIndust-5.25.24-Jim-753	X004970SIF	1589237919	The Complete Photo Guide to Candy Making: All You Need to Know to Make All Types of Candy - The Essential Reference for Beginners to Skilled Candy ... Caramels, Truffles Mints, Marshmallows & More	UsedGood	15.00	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+002-DeseretIndust-6.12.24-Jim-040	X004A08B53	0806540389	Three Ordinary Girls: The Remarkable Story of Three Dutch Teenagers Who Became Spies, Saboteurs, Nazi Assassins--and WWII Heroes	UsedGood	16.89	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+002-DeseretIndust-6.19.24-Jim-012	X004ADJXAR	1629727784	Spirit: The Gift That Connects You to Heaven	UsedGood	13.64	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+002-DeseretIndust-6.26.24-Jim-122	X004AU1AVF	1118073746	Basketball For Dummies	UsedGood	12.78	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+002-DeseretIndust-6.4.24-Jim-854	X0049M8C8X	B0019T5H4K	New Standard Reference Bible Blue Ribbon Edition: (Authorized or King James Version) School and Library Reference Edition Red Letter Edition Pictorial Pronouncing Dictionary and other Interesting Instructive Features	UsedAcceptable	48.00	No		Yes	1	1	0	0	1	0.17	0	0	0	0	0	0
+002-DeseretIndust-7.12.24-Jim-925	X004BHQSBT	0197608280	World in the Making: Volume One to 1500	UsedGood	48.10	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+002-DeseretIndust-7.25.24-Jim-066	X004C26Q1F	1465466622	Thomas & Friends Character Encyclopedia	UsedAcceptable	59.93	No		Yes	0	0	0	0	3	0.05	3	0	0	0	0	0
+002-NPS-5.21.24-Jim-527	X00490P9XV	1982151390	Class: A Memoir of Motherhood, Hunger, and Higher Education	UsedGood	9.97	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+002-NPS-6.1.24-Jim-842	X0049I6WTN	B0B48MF6CF	Idaho Real Estate Handbook 7th Edition	UsedAcceptable	45.98	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+002-NPSAuction-5.28.24-Jim-494	X0049B6ZBP	0133323064	Texas History Teachers Edition	UsedVeryGood	119.00	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+002-Thrift-5.20.24-Jim-772	X0048YS4GH	0671793527	I Promised My Dad: An Intimate Portrait of Michael Landon	UsedGood	6.98	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+003-DeseretIndust-5.25.24-Jim-780	X004970SIP	1598118552	Cooking with Food Storage Made Easy	UsedGood	21.73	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+003-DeseretIndust-6.12.24-Jim-710	X0049ZZLHZ	0873497511	Warman's Fiesta Ware: Identification and Price Guide	UsedGood	21.98	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+003-DeseretIndust-6.26.24-Jim-569	X004AU386Z	1668024527	The Glucose Goddess Method: The 4-Week Guide to Cutting Cravings, Getting Your Energy Back, and Feeling Amazing	UsedGood	13.77	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+003-DeseretIndust-6.4.24-Jim-422	X0049MGH2B	1450432077	Strength Training for Fat Loss	UsedAcceptable	17.95	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+003-DeseretIndust-7.12.24-Jim-625	X004BHTNVV	0393690660	Learning Astronomy by Doing Astronomy	UsedGood	16.00	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+003-DeseretIndust-7.25.24-Jim-204	X004C26QQF	0470599111	People Buy You: The Real Secret to what Matters Most in Business	UsedGood	14.01	No		Yes	0	0	0	0	3	0.02	3	0	0	0	0	0
+003-DeseretIndust-8.7.24-Jim-738	X004CL30LZ	1250289424	The Guest: A Novel	UsedGood	12.33	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+003-NPS-8.19.24-Jim-657	X004D4JSJJ	1668003090	Dirty Thirty (30) (Stephanie Plum)	UsedGood	10.98	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+003-NPSAuction-5.28.24-Jim-697	X0049B41CZ	1583712380	History Alive! The Medieval World and Beyond	UsedLikeNew	75.00	No		Yes	3	3	0	0	3	0.06	0	0	0	0	0	0
+003-Savers-6.19.24-Jim-429	X004ADMC69	1465419543	Human Anatomy: The Definitive Visual Guide	UsedGood	43.79	No		Yes	1	1	0	0	1	0.08	0	0	0	0	0	0
+003-Thrift-5.20.24-Jim-128	X0048YS985	1592286585	As Told at The Explorers Club: More Than Fifty Gripping Tales Of Adventure (Explorers Club Classic)	UsedGood	20.95	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+004-DeseretIndust-5.25.24-Jim-301	X00496W2S5	B000FOHH2K	Illustrated Stories From the Book of Mormon (16 volume set)	UsedGood	177.98	No		Yes	1	1	0	0	1	1.68	0	0	0	0	0	0
+004-DeseretIndust-6.12.24-Jim-551	X004A08C8J	0743234723	Bernard Clayton's New Complete Book of Breads	UsedGood	58.74	No		Yes	1	1	0	0	1	0.09	0	0	0	0	0	0
+004-DeseretIndust-6.19.24-Jim-898	X004ADM9JJ	1602185069	Practicing Basic Skills in Reading: One-Minute Fluency Builders Series	UsedAcceptable	20.64	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+004-DeseretIndust-6.4.24-Jim-570	X0049MGH6H	1590385845	The Lost 500 Years: What Happened Between the Old And New Testaments	UsedAcceptable	17.37	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+004-DeseretIndust-7.12.24-Jim-904	X004BHYQ09	1250803829	A Flicker in the Dark: A Novel	UsedGood	9.98	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+004-DeseretIndust-7.25.24-Jim-988	X004C26R1T	0951951742	How to Starve Cancer: ...and Then Kill It With Ferroptosis	UsedGood	15.95	No		Yes	0	0	0	0	3	0.04	3	0	0	0	0	0
+004-DeseretIndust-8.7.24-Jim-832	X004CL57EX	B0CCK3XKYK	Home Is Where the Bodies Are	UsedGood	17.74	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+004-NPS-5.21.24-Jim-877	X00490NIEX	1782749209	Myths of Ancient Egypt	UsedGood	6.60	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+004-NPS-6.1.24-Jim-239	X0049IC8SH	B0B48MF6CF	Idaho Real Estate Handbook 7th Edition	UsedGood	45.98	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+004-NPS-8.19.24-Jim-124	X004D4WLT3	1668003090	Dirty Thirty (30) (Stephanie Plum)	UsedGood	10.98	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+005-DeseretIndust-5.25.24-Jim-915	X004972BRB	069243318X	The Tiny Potty Training Book: A Simple Guide for Non-coercive Potty Training	UsedGood	23.93	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+005-DeseretIndust-6.12.24-Jim-057	X004A03CNJ	0976824205	Peter Can't Eat Peanuts	UsedGood	22.00	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+005-DeseretIndust-6.19.24-Jim-691	X004ADJZ37	1506287670	AP Human Geography Premium, 2024: 6 Practice Tests + Comprehensive Review + Online Practice (Barron's AP Prep)	UsedGood	24.00	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+005-DeseretIndust-6.26.24-Jim-737	X004AU3BAD	1538719916	The Edge (6:20 Man, 2)	UsedVeryGood	8.93	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+005-DeseretIndust-6.4.24-Jim-973	X0049MGGXB	1590385845	The Lost 500 Years: What Happened Between the Old And New Testaments	UsedGood	17.37	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+005-DeseretIndust-7.12.24-Jim-333	X004BI2OKR	1250888166	Alone with You in the Ether: A Love Story	UsedGood	13.03	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+005-DeseretIndust-7.25.24-Jim-636	X004C26R2N	1958626287	Racing Hearts and Burning Cars	UsedGood	15.96	No		Yes	0	0	0	0	3	0.03	3	0	0	0	0	0
+005-DeseretIndust-8.7.24-Jim-298	X004CKQF2H	1491928050	Cooking for Geeks: Real Science, Great Cooks, and Good Food	UsedGood	15.16	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+005-NPS-5.21.24-Jim-937	X00490JV71	1782749209	Myths of Ancient Egypt	UsedVeryGood	6.60	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+005-NPS-6.1.24-Jim-871	X0049IC945	0891349634	Watercolor Basics: Light	UsedAcceptable	26.89	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+005-NPS-8.19.24-Jim-686	X004D4I561	0063320681	Worthy	UsedGood	11.30	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+006-DeseretIndust-5.25.24-Jim-792	X004973YR7	0984080104	The Great Behavior Breakdown	UsedGood	10.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+006-DeseretIndust-6.12.24-Jim-762	X0049ZZPDF	1943874727	Growing Tomorrow's Citizens in Today's Classrooms: Assessing Seven Critical Competencies (Teaching Strategies for Soft Skills and 21st-Century-Skills Assessment Methods)	UsedGood	24.19	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+006-DeseretIndust-6.19.24-Jim-914	X004ADHEC1	1338608940	Weather	UsedVeryGood	12.77	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+006-DeseretIndust-6.26.24-Jim-347	X004AU3CHF	0998739952	Eat What You Watch: A Cookbook for Movie Lovers	UsedGood	7.69	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+006-DeseretIndust-6.4.24-Jim-291	X0049M8DLJ	1942154917	Sounding Out the Sight Words: An Alternative to Rote Memorization	UsedGood	29.99	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+006-DeseretIndust-7.12.24-Jim-126	X004BI2D3F	0692569049	From the Restaurants of Park City, A Mountain Town's Cookbook - book one	UsedGood	18.39	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+006-DeseretIndust-7.25.24-Jim-532	X004C28RR1	163609855X	Mary's Calico Hope (The Heart of the Amish)	UsedGood	13.98	No		Yes	1	1	0	0	4	0.02	3	0	0	0	0	0
+006-DeseretIndust-8.7.24-Jim-657	X004CKXR4L	1643853864	The Girls Weekend: A Novel	UsedGood	18.91	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+006-NPS-5.21.24-Jim-127	X00490JV8P	1782749209	Myths of Ancient Egypt	UsedVeryGood	6.60	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+006-NPS-6.1.24-Jim-499	X0049IANTD	164980251X	Mexico City - Assouline Coffee Table Book	UsedAcceptable	159.00	No		Yes	0	0	0	0	0	0.14	0	0	0	0	0	0
+006-NPS-8.19.24-Jim-694	X004D4WPR1	0063039583	To Rescue the Constitution: George Washington and the Fragile American Experiment: Bret Baier's masterful exploration of America's early struggles. A perfect gift for history buffs and teachers.	UsedGood	10.85	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+006-NPSAuction-5.28.24-Jim-461	X0049AXH2L	0321694635	MyLab Statistics -- Valuepack Access Card	UsedGood	7.49	No		Yes	1	1	0	0	1	0	0	0	0	0	0	0
+007-DeseretIndust-5.25.24-Jim-647	X00497335F	157345205X	Joseph Smith's Kirtland: Eyewitness Accounts	UsedGood	7.78	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+007-DeseretIndust-6.12.24-Jim-473	X004A08I7T	1118006720	Botany For Dummies	UsedGood	16.30	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+007-DeseretIndust-6.19.24-Jim-916	X004ADK7AR	0875794017	Messiah Series	UsedAcceptable	59.86	No		Yes	1	1	0	0	1	0.24	0	0	0	0	0	0
+007-DeseretIndust-6.26.24-Jim-074	X004AU7JFL	1592579086	The Complete Idiot's Guide to Learning Spanish, 5th Edition	UsedGood	8.37	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+007-DeseretIndust-6.26.24-Jim-361	X004AU399B	1984818589	The Secret: A Jack Reacher Novel	UsedVeryGood	9.88	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+007-DeseretIndust-6.4.24-Jim-273	X0049M8DYB	1984817701	Caring for Your Baby and Young Child, 7th Edition: Birth to Age 5	UsedAcceptable	24.99	No		Yes	0	0	0	0	0	0.08	0	0	0	0	0	0
+007-DeseretIndust-7.12.24-Jim-193	X004BI2D5D	1524422371	Look Unto Him	UsedGood	19.19	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+007-DeseretIndust-7.25.24-Jim-831	X004C28RRB	1108444857	A Concise History of History: Global Historiography from Antiquity to the Present (Cambridge Concise Histories)	UsedGood	29.85	No		Yes	1	1	0	0	4	0.02	3	0	0	0	0	0
+007-DeseretIndust-8.19.24-Jim-472	X004D4WRAV	1781257655	The Daily Stoic: 366 Meditations on Wisdom, Perseverance, and the Art of Living: Featuring new translations of Seneca, Epictetus, and Marcus Aurelius	UsedGood	16.41	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+007-DeseretIndust-8.7.24-Jim-177	X004CLCXO5	0393708357	10 Principles for Doing Effective Couples Therapy (Norton Series on Interpersonal Neurobiology)	UsedGood	29.50	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+007-NPS-6.1.24-Jim-857	X0049I6YIR	0823056538	Watercolor Bright and Beautiful	UsedAcceptable	12.31	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+007-NPSAuction-5.28.24-Jim-344	X0049B1HXB	111952475X	Driven by Data 2.0: A Practical Guide to Improve Instruction	UsedAcceptable	18.75	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+007-NPSAuction-8.29.24-Jim-919	X004DN6X9D	1319195369	American Government: Stories of a Nation: For the AP Course	UsedGood	116.34	No		Yes	1	0	0	1	1	0.05	0	0	0	0	0	0
+007-Thrift-5.20.24-Jim-534	X0048YS5AR	1510766804	Real Anthony Fauci: Bill Gates, Big Pharma, and the Global War on Democracy and Public Health (Children�s Health Defense)	UsedGood	11.95	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+008-DeseretIndust-5.25.24-Jim-222	X00496Y9NB	B09CKJR2H3	Haunting Adeline (Cat and Mouse Duet)	UsedGood	20.98	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+008-DeseretIndust-6.12.24-Jim-539	X004A08N3D	B001703Y0A	THE PORTER ROCKWELL CHRONICLES - VOL 1 - 4 - A Complete 4 Vol Set	UsedAcceptable	68.59	No		Yes	0	0	0	0	0	0.22	0	0	0	0	0	0
+008-DeseretIndust-6.19.24-Jim-087	X004ADMVRJ	0760711224	Homer Price	UsedAcceptable	26.95	No		Yes	0	0	0	0	0	0	0	0	0	0	0	0
+008-DeseretIndust-6.26.24-Jim-053	X004AU5LL5	0552160962	I Am Pilgrim	UsedGood	7.49	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+008-DeseretIndust-6.4.24-Jim-227	X0049M8E2H	0300197705	Fashion Plates: 150 Years of Style	UsedGood	23.02	No		Yes	1	1	0	0	1	0.06	0	0	0	0	0	0
+008-DeseretIndust-7.12.24-Jim-418	X004BI2DG7	1328589897	Binging With Babish: 100 Recipes Recreated from Your Favorite Movies and TV Shows	UsedGood	14.29	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+008-DeseretIndust-7.25.24-Jim-040	X004C26RLT	B0B2ZP27TC	Behind the Bill of Rights: Timeless Principles that Make it Tick	UsedGood	16.30	No		Yes	1	1	0	0	4	0.03	3	0	0	0	0	0
+008-DeseretIndust-8.19.24-Jim-801	X004D4X18D	0702029637	Shiatsu Theory and Practice: A comprehensive text for the student and professional	UsedGood	46.69	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+008-DeseretIndust-8.7.24-Jim-081	X004CLAMFH	1780289707	The Gnostic Gospels: Including the Gospel of Thomas, the Gospel of Mary Magdalene (Sacred Texts)	UsedGood	11.84	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+008-NPS-5.21.24-Jim-152	X00490QS1X	0316259187	The Five-Star Weekend	UsedGood	8.36	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+008-NPS-6.1.24-Jim-254	X0049I6YL9	1558858822	The Boy Who Touched the Stars / El ni�o que alcanz� las estrellas (English and Spanish Edition)	UsedAcceptable	14.14	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+008-NPSAuction-5.28.24-Jim-665	X0049B4337	111952475X	Driven by Data 2.0: A Practical Guide to Improve Instruction	UsedAcceptable	18.75	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+008-NPSAuction-8.29.24-Jim-848	X004DN15P5	1107690633	North American Cambridge Latin Course Unit 1 Student's Book	UsedGood	35.14	No		Yes	14	0	0	14	14	0.05	0	0	0	0	0	0
+009-DeseretIndust-5.25.24-Jim-111	X004974IPT	0971805318	Exploring with Custer: The 1874 Black Hills Expedition	UsedGood	39.03	No		Yes	0	0	0	0	0	0.07	0	0	0	0	0	0
+009-DeseretIndust-6.1.24-Jim-676	X0049I3IFT	006170301X	Ace of Cakes: Inside the World of Charm City Cakes	UsedGood	5.98	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+009-DeseretIndust-6.12.24-Jim-761	X004A046EN	1421536773	Psyren, Vol. 2 (2)	UsedGood	9.99	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+009-DeseretIndust-6.26.24-Jim-998	X004AU3GBH	1611298814	Forgotten God - Reversing Our Tragic Neglect of the Holy Spirit	UsedGood	37.75	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+009-DeseretIndust-6.4.24-Jim-769	X0049M8EC7	0793136644	Storyselling for Financial Advisors : How Top Producers Sell	UsedGood	15.09	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+009-DeseretIndust-7.12.24-Jim-919	X004BHYQSB	163557563X	Piranesi	UsedGood	14.50	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+009-DeseretIndust-7.25.24-Jim-684	X004C28SCF	1250888093	Being Henry: The Fonz . . . and Beyond	UsedGood	12.49	No		Yes	1	1	0	0	4	0.03	3	0	0	0	0	0
+009-DeseretIndust-8.19.24-Jim-251	X004D4X2VJ	0395362903	The Hobbit, or, There and Back Again	UsedAcceptable	48.50	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+009-NPS-5.21.24-Jim-971	X00490IUO1	B0C4X2XYZ2	Pacific Coast Highway Travel Guide - 202 Best Stops: Northbound Edition - Road Trip From San Diego to Seattle - California, Oregon, Washington (PCH Travel Guides)	UsedGood	19.94	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+009-NPSAuction-5.28.24-Jim-978	X0049B436T	111952475X	Driven by Data 2.0: A Practical Guide to Improve Instruction	UsedAcceptable	18.75	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+009-Thrift-5.20.24-Jim-567	X0048YKKI7	1493010697	The Montana Gardener's Companion: An Insider's Guide to Gardening under the Big Sky (Gardening Series)	UsedGood	13.45	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+010-DeseretIndust-5.25.24-Jim-880	X004970X71	148478779X	Percy Jackson and the Olympians The Percy Jackson Coloring Book (Percy Jackson and the Olympians) (Percy Jackson & the Olympians)	UsedGood	33.07	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+010-DeseretIndust-6.1.24-Jim-622	X0049I3GNN	0996242899	Let's Make Sense of Thermal Cooking Cookbook	UsedGood	31.49	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+010-DeseretIndust-6.12.24-Jim-046	X004A04AVH	B0BM42BDM9	The Other Side: From a Shack to Silicon Valley	UsedGood	14.99	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+010-DeseretIndust-6.19.24-Jim-338	X004ADHK2P	1909263982	The Lines On Nana's Face	UsedGood	23.45	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+010-DeseretIndust-6.26.24-Jim-192	X004AU3GC1	1607812649	Dinosaurs Of Utah: Second Edition	UsedGood	19.37	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+010-DeseretIndust-6.4.24-Jim-974	X0049MGIAR	1581572638	The High-Protein Vegetarian Cookbook: Hearty Dishes that Even Carnivores Will Love	UsedGood	13.60	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+010-DeseretIndust-7.25.24-Jim-998	X004C28SD9	1641770945	The Coming of Neo-Feudalism: A Warning to the Global Middle Class	UsedGood	15.67	No		Yes	1	1	0	0	4	0.05	3	0	0	0	0	0
+010-DeseretIndust-8.19.24-Jim-360	X004D4I8VD	0073510955	Practical Reflexology: Interpretation and Techniques	UsedGood	45.00	No		Yes	0	0	0	0	0	0.06	0	0	0	0	0	0
+010-DeseretIndust-8.7.24-Jim-421	X004CLAO7D	1540498859	French: Short Stories for Intermediate Level + AUDIO: Improve your French listening comprehension skills with seven French stories for intermediate level (Easy Stories for Intermediate French)	UsedGood	25.20	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+010-NPS-5.21.24-Jim-149	X00490JWEN	1338616137	Stacey's Mistake: A Graphic Novel (The Baby-Sitters Club #14) (The Baby-Sitters Club Graphix)	UsedGood	5.85	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+010-NPS-7.12.24-Jim-015	X004BHYOW9	1737900408	Ruthless Equity: Disrupt the Status Quo and Ensure Learning for ALL Students	UsedGood	17.69	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+010-NPSAuction-5.28.24-Jim-645	X0049B86S5	111952475X	Driven by Data 2.0: A Practical Guide to Improve Instruction	UsedAcceptable	18.75	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+010-Thrift-5.20.24-Jim-741	X0048YTS9J	087579176X	A Celebration of Christmas: A Collection of Stories, Poems, Essays, and Traditions by Favorite Lds Authors.	UsedGood	8.88	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+011-DeseretIndust-6.1.24-Jim-136	X0049IAOX3	0981698611	The Gathering of Friends Volume 2	UsedGood	9.98	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+011-DeseretIndust-6.12.24-Jim-550	X004A0003J	0964920549	On Combat: The Psychology and Physiology of Deadly Conflict in War and in Peace	UsedAcceptable	23.00	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+011-DeseretIndust-6.19.24-Jim-317	X004ADE32P	B0012C2O2C	Psycho-Cybernetics A New Way to Get More Living Ou	UsedAcceptable	23.94	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+011-DeseretIndust-6.26.24-Jim-636	X004AU3GTJ	1574320319	Crystal Stemware Identification Guide	UsedGood	17.00	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+011-DeseretIndust-6.4.24-Jim-925	X0049MCEXR	1844744744	What Did You Expect?: Redeeming the Realities of Marriage	UsedGood	30.50	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+011-DeseretIndust-7.25.24-Jim-416	X004C28SG1	0688124453	Words That Hurt, Words That Heal: How to Choose Words Wisely and Well	UsedGood	16.40	No		Yes	0	0	0	0	3	0.03	3	0	0	0	0	0
+011-DeseretIndust-8.19.24-Jim-149	X004D4SNSV	0500251231	The D-Day Atlas: Anatomy of the Normandy Campaign	UsedGood	19.98	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+011-DeseretIndust-8.7.24-Jim-521	X004CLAMJX	1587675706	Six Scary Stories	UsedGood	13.00	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+011-NPS-5.21.24-Jim-183	X00490PFIF	158017535X	Horsekeeping on a Small Acreage: Designing and Managing Your Equine Facilities	UsedGood	17.53	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+011-NPS-5.25.24-Jim-818	X0049746O7	1616287330	Taco Night (Williams-Sonoma)	UsedGood	15.51	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+011-NPS-7.12.24-Jim-590	X004BHYRAX	0974814008	Elementary Mathematics for Teachers	UsedAcceptable	17.03	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+011-Thrift-5.20.24-Jim-698	X0048YTFV5	0692992677	The Complete Penny Stock Course: Learn How To Generate Profits Consistently By Trading Penny Stocks	UsedGood	14.44	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+012-DeseretIndust-6.12.24-Jim-622	X004A07RMV	1454709014	Quilled Mandalas: 30 Paper Projects for Creativity and Relaxation	UsedGood	14.39	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+012-DeseretIndust-6.19.24-Jim-626	X004ADQN2N	039450223X	An American saga: Juan Trippe and his Pan Am empire	UsedGood	28.52	No		Yes	0	0	0	0	0	0.06	0	0	0	0	0	0
+012-DeseretIndust-6.4.24-Jim-947	X0049MCEYV	0648352404	Period Repair Manual: Natural Treatment for Better Hormones and Better Periods	UsedGood	16.00	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+012-DeseretIndust-8.7.24-Jim-433	X004CKY0F1	0857503642	The Hunger: "Deeply disturbing, hard to put down" - Stephen King	UsedGood	18.95	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+012-DeseretIndust-8.7.24-Jim-704	X004CLAQF3	B08XLLBYLG	The Roommate	UsedGood	14.23	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+012-NPS-5.25.24-Jim-996	X004970Z5L	0060531290	Here Comes T. Rex Cottontail	UsedGood	14.06	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+012-NPS-6.1.24-Jim-776	X0049I9CAJ	1250888093	Being Henry: The Fonz . . . and Beyond	UsedVeryGood	10.99	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+012-NPS-7.12.24-Jim-774	X004BHYPEV	1483350975	Shouting Won?t Grow Dendrites: 20 Techniques to Detour Around the Danger Zones	UsedGood	19.17	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+012-NPSAuction-5.28.24-Jim-374	X0049B7EP1	1284200884	NASM Essentials of Personal Fitness Training	UsedAcceptable	99.74	No		Yes	1	1	0	0	1	0.08	0	0	0	0	0	0
+012-Thrift-5.20.24-Jim-213	X0048YTSBH	1501143107	Misery: A Novel	UsedGood	11.94	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+013-DeseretIndust-5.25.24-Jim-519	X00497123F	1942121628	Own Your Past Change Your Future: A Not-So-Complicated Approach to Relationships, Mental Health & Wellness	UsedGood	17.50	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+013-DeseretIndust-6.12.24-Jim-516	X004A0CFWD	0890133301	Glen Canyon: Images of a Lost World	UsedGood	189.00	No		Yes	0	0	0	0	0	0.06	0	0	0	0	0	0
+013-DeseretIndust-6.19.24-Jim-787	X004ADE3XT	1438008783	Dictionary of Computer and Internet Terms (Barron's Business Dictionaries)	UsedAcceptable	25.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+013-DeseretIndust-6.26.24-Jim-412	X004AU3FBD	1118827414	Trigonometry For Dummies, 2nd Edition	UsedAcceptable	13.03	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+013-DeseretIndust-6.26.24-Jim-544	X004AU3F0T	1781162646	Joyland (Hard Case Crime)	UsedGood	7.11	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+013-DeseretIndust-6.4.24-Jim-516	X0049MCFFT	B000YQWQZ2	The Kingdom and the Crown Trilogy: Set Vols. 1-3 - Fishers of Men/Come Unto Me/Behold the Man	UsedGood	41.97	No		Yes	2	2	0	0	2	0.21	0	0	0	0	0	0
+013-DeseretIndust-7.25.24-Jim-128	X004C1YT3N	1609075811	Ascending the Mountain of the Lord: Temple Praise, and Worship in the Old Testament	UsedGood	30.68	No		Yes	1	1	0	0	4	0.05	3	0	0	0	0	0
+013-DeseretIndust-8.19.24-Jim-500	X004D4V7JX	0195123034	The Classical Greek Reader	UsedGood	19.94	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+013-NPS-5.21.24-Jim-602	X00490NJWJ	1338756435	The Rise of the Goldfish: A Branches Book (Pets Rule! #4)	UsedGood	17.09	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+013-NPS-6.1.24-Jim-490	X0049I7FEJ	1250888093	Being Henry: The Fonz . . . and Beyond	UsedVeryGood	10.99	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+013-NPS-7.12.24-Jim-915	X004BHTP55	1914986008	The DBT Skills Workbook for Teens: A Fun Guide to Manage Anxiety and Stress, Understand Your Emotions and Learn Effective Communication Skills (New Books For Teens)	UsedGood	16.92	No		Yes	1	1	0	0	1	0.06	0	0	0	0	0	0
+013-NPSAuction-5.28.24-Jim-725	X0049B7H9J	1554813123	The Broadview Anthology of British Literature: Concise Volume A - Third Edition: The Medieval Period - The Renaissance and the Early Seventeenth Century - The Restoration and the Eighteenth Century	UsedLikeNew	27.65	No		Yes	0	0	0	0	0	0.08	0	0	0	0	0	0
+014-DeseretIndust-5.25.24-Jim-141	X00497124T	0985690437	Why Isn't My Brain Working?: A Revolutionary Understanding of Brain Decline and Effective Strategies to Recover Your Brain's Health	UsedGood	17.63	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+014-DeseretIndust-6.12.24-Jim-060	X004A002UP	0684808544	ALL CORVETTES ARE RED: The Rebirth of an American Legend	UsedGood	32.36	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+014-DeseretIndust-6.19.24-Jim-799	X004ADQONL	0916856372	Daily Reflections: A Book of Reflections by A.A. Members for A.A. Members	UsedGood	11.34	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+014-DeseretIndust-6.26.24-Jim-230	X004AU96NJ	0133612600	Drive Right: Grade 9	UsedVeryGood	25.98	No		Yes	7	6	0	0	7	0.03	0	0	0	1	0	0
+014-DeseretIndust-6.4.24-Jim-471	X0049MGM9T	1621572668	Measure of a Man: From Auschwitz Survivor to Presidents' Tailor	UsedGood	32.98	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+014-DeseretIndust-7.25.24-Jim-048	X004C224N9	1504058879	Goodbye, Mr. Chips	UsedGood	13.44	No		Yes	0	0	0	0	3	0.01	3	0	0	0	0	0
+014-DeseretIndust-8.19.24-Jim-647	X004D4IB5L	0754820831	The World Encyclopedia of Battleships & Cruisers: The complete illustrated history of international naval warships from 1860 to the present day, shown in over 1200 archive photographs	UsedGood	79.85	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+014-DeseretIndust-8.7.24-Jim-083	X004CKT0W9	0932633498	An Introduction to General Systems Thinking (Silver Anniversary Edition)	UsedGood	18.00	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+014-NPS-5.21.24-Jim-069	X00490R18H	0711256985	Shakespeare's Gardens	UsedAcceptable	8.22	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+014-NPS-6.1.24-Jim-057	X0049I9AJR	1982195177	Getting Out of Saigon: How a 27-Year-Old Banker Saved 113 Vietnamese Civilians	UsedGood	10.99	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+014-NPS-7.12.24-Jim-394	X004BI45T5	0310753996	The Berenstain Bears' Holiday Cookbook: Cub-Friendly Cooking With an Adult (Berenstain Bears/Living Lights: A Faith Story)	UsedGood	24.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+014-NPS-8.19.24-Jim-772	X004D51B4N	039474067X	Orientalism	UsedAcceptable	12.00	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+014-NPSAuction-5.28.24-Jim-175	X0049B7HC1	1554813123	The Broadview Anthology of British Literature: Concise Volume A - Third Edition: The Medieval Period - The Renaissance and the Early Seventeenth Century - The Restoration and the Eighteenth Century	UsedLikeNew	27.65	No		Yes	0	0	0	0	0	0.08	0	0	0	0	0	0
+014-Thrift-5.20.24-Jim-022	X0048YTR63	0071496769	Beyond Success: Building a Personal, Financial, and Philanthropic Legacy	UsedGood	19.98	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+015-DeseretIndust-5.25.24-Jim-065	X004974KHF	0578395940	Self-Therapy: A Step-by-Step Guide to Creating Wholeness Using IFS, A Cutting-Edge Psychotherapy, 3rd Edition	UsedGood	16.16	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+015-DeseretIndust-5.28.24-Jim-264	X0049BFU61	0345496604	Kitchen Princess 3	UsedGood	10.95	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+015-DeseretIndust-6.19.24-Jim-616	X004ADNFCJ	B0977SDNCZ	The Most Beautiful Moment in Life 2 - The Notes	UsedVeryGood	118.74	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+015-DeseretIndust-6.4.24-Jim-041	X0049MGMA3	1524733318	November 1942: An Intimate History of the Turning Point of World War II	UsedGood	14.86	No		Yes	1	1	0	0	1	0.07	0	0	0	0	0	0
+015-DeseretIndust-7.12.24-Jim-813	X004BI2SFD	1478944978	The Whole Foods Cookbook: 120 Delicious and Healthy Plant-Centered Recipes	UsedGood	17.99	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+015-DeseretIndust-7.25.24-Jim-309	X004C20HIN	1462110940	Backyard Winter Gardening: Vegetables Fresh and Simple, in Any Climate Without Artificial Heat or Electricity the Way It's Been Done for 2,000 Ye	UsedGood	12.47	No		Yes	0	0	0	0	3	0.02	3	0	0	0	0	0
+015-DeseretIndust-8.7.24-Jim-540	X004CLAZA9	1939370159	Warren Buffett Accounting Book: Reading Financial Statements for Value Investing	UsedGood	17.98	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+015-DeseretIndust-8.7.24-Jim-772	X004CLAXB5	B007Z01N2C	SCIENCE IN ACTION	UsedGood	16.93	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+015-NPS-5.21.24-Jim-143	X00490R1QJ	B09WPP7R6S	Don't Believe Everything You Think: Why Your Thinking Is The Beginning & End Of Suffering (Beyond Suffering)	UsedGood	13.98	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+015-NPS-5.21.24-Jim-499	X00490PIZZ	1338756400	Kittens Are Monsters: A Branches Book (Pets Rule! #3)	UsedGood	17.47	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+015-NPS-6.1.24-Jim-221	X0049I9AR9	1576300447	The Complete Italian Vegetarian Cookbook: 350 Essential Recipes for Inspired Everyday Eating	UsedGood	26.98	No		Yes	1	1	0	0	1	0.08	0	0	0	0	0	0
+015-NPS-6.12.24-Jim-962	X0049ZYQNF	0399544968	Genesis (Project Nemesis)	UsedGood	9.99	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+015-NPS-8.19.24-Jim-530	X004D4IFO3	1638787905	5-Minute Daily Writing Prompts: 501 Prompts to Unleash Creativity and Spark Inspiration	UsedGood	11.14	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+015-Thrift-5.20.24-Jim-038	X0048YTQGJ	0062491350	The Cursed Sea (Glass Spare, 2)	UsedGood	17.94	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+016-DeseretIndust-5.25.24-Jim-593	X0049710MD	1684036119	Splitting: Protecting Yourself While Divorcing Someone with Borderline or Narcissistic Personality Disorder	UsedGood	15.92	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+016-DeseretIndust-5.28.24-Jim-222	X0049B7N9D	0060882085	Queste (Septimus Heap, Book 4)	UsedAcceptable	25.59	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+016-DeseretIndust-6.19.24-Jim-568	X004ADPQ71	1934537748	Light in the Wilderness: Explorations in the Spiritual Life	UsedGood	10.91	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+016-DeseretIndust-6.4.24-Jim-359	X0049MGKEL	1118950364	Bookkeeping For Dummies (For Dummies Series)	UsedGood	17.35	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+016-DeseretIndust-7.12.24-Jim-394	X004BI4757	0062843370	The Plant Paradox Cookbook: 100 Delicious Recipes to Help You Lose Weight, Heal Your Gut, and Live Lectin-Free (The Plant Paradox, 2)	UsedAcceptable	14.99	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+016-DeseretIndust-7.25.24-Jim-780	X004C28TPL	1259837351	Clarity First: How Smart Leaders and Organizations Achieve Outstanding Performance	UsedGood	26.50	No		Yes	0	0	0	0	3	0.04	3	0	0	0	0	0
+016-DeseretIndust-8.7.24-Jim-363	X004CLAY19	B0007E8IXU	Sovereigns of the sage;: True stories of people and places in the great sagebrush kingdom of the Western United States	UsedGood	34.76	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+016-NPS-6.1.24-Jim-993	X0049I7FN5	0316403385	Crosshairs	UsedAcceptable	13.49	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+016-NPS-8.19.24-Jim-096	X004D51BGB	1638787905	5-Minute Daily Writing Prompts: 501 Prompts to Unleash Creativity and Spark Inspiration	UsedGood	11.14	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+016-Thrift-5.20.24-Jim-783	X0048YURLH	0794828086	Montana Football Vault	UsedGood	56.05	No		Yes	1	1	0	0	1	0.12	0	0	0	0	0	0
+016-Thrift-5.20.24-Jim-820	X0048YOHU9	1401964362	The Gap and The Gain: The High Achievers' Guide to Happiness, Confidence, and Success	UsedGood	13.67	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+017-DeseretIndust-5.25.24-Jim-180	X0049739OF	0801870909	The New Nature of Maps: Essays in the History of Cartography	UsedGood	18.00	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+017-DeseretIndust-5.28.24-Jim-180	X0049B7OBF	044654759X	Safe Haven	UsedAcceptable	7.56	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+017-DeseretIndust-6.12.24-Jim-467	X004A08VML	1506332358	Visible Learning for Literacy, Grades K-12: Implementing the Practices That Work Best to Accelerate Student Learning (Corwin Literacy)	UsedGood	12.28	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+017-DeseretIndust-6.19.24-Jim-005	X004ADFZ5J	1639932208	Prophets See around Corners	UsedGood	17.99	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+017-DeseretIndust-6.4.24-Jim-675	X0049MGOFL	B087349Q57	Better Small Talk: Talk to Anyone, Avoid Awkwardness, Generate Deep Conversations, and Make Real Friends (How to be More Likable and Charismatic)	UsedGood	13.16	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+017-DeseretIndust-7.12.24-Jim-187	X004BHTQXB	160641092X	Sports: Life Lessons from Court, Field, and Gridiron	UsedGood	41.21	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+017-DeseretIndust-7.25.24-Jim-635	X004C23E8X	013701712X	Statistics for Six Sigma Green Belts with Minitab and JMP	UsedGood	33.40	No		Yes	0	0	0	0	3	0.04	3	0	0	0	0	0
+017-DeseretIndust-8.7.24-Jim-700	X004CLD49X	0764158201	The Bible of Illuminated Letters: A Treasury of Decorative Calligraphy	UsedVeryGood	19.10	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+017-NPS-5.21.24-Jim-181	X00490QWLJ	1665711396	The Next Cmo: A Guide to Operational Marketing Excellence	UsedVeryGood	5.98	No		Yes	21	21	0	0	21	0.02	0	0	0	0	0	0
+017-NPS-6.1.24-Jim-635	X0049I9CK9	1335457968	A Multitude of Dreams	UsedGood	9.98	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+017-NPS-8.19.24-Jim-118	X004D4WMZV	1412966396	Parents and Professionals Partnering for Children With Disabilities: A Dance That Matters	UsedGood	11.67	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+017-Thrift-5.20.24-Jim-022	X0048YT579	B003AO75AQ	The Work And The Glory Gerald Lund 9 Volume Hardcover Set Vol 1. Pillar of Light 2. Like a Fire is Burning 3. Truth will Prevail 4. Thy Gold To Refine 5. A seson of Joy 6. Praise The Man 7. No Unhallowed Hand 8. So Great a Cause 9. All is Well (The Work And The Glory, Complete 9 Volume set)	UsedGood	68.55	No		Yes	0	0	0	0	0	0.91	0	0	0	0	0	0
+018-DeseretIndust-5.25.24-Jim-511	X00496W4EH	0142427543	The Madness Underneath (Shades of London)	UsedGood	9.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+018-DeseretIndust-5.28.24-Jim-746	X0049B7R4T	1639931015	Swimming in a Sea of Stars | A Young Adult Novel - Suicide Prevention	UsedGood	19.99	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+018-DeseretIndust-6.12.24-Jim-375	X004A0CM8P	0945320531	Understanding Variation: The Key to Managing Chaos	UsedGood	14.67	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+018-DeseretIndust-6.12.24-Jim-414	X004A08VN5	0061995363	The Alice B. Toklas Cook Book	UsedGood	12.04	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+018-DeseretIndust-6.20.24-Jim-050	X004ADI5FV	038552126X	The Unwritten Laws of Business	UsedGood	10.10	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+018-DeseretIndust-6.4.24-Jim-489	X0049MJ26T	B07B6B7J9F	Darkover - The Forbidden Circle	UsedGood	41.82	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+018-DeseretIndust-7.12.24-Jim-501	X004BI3UP5	1950408035	Beloved Bridegroom	UsedGood	13.45	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+018-DeseretIndust-7.25.24-Jim-941	X004C26RZZ	1589797981	475 Tax Deductions for Businesses and Self-Employed Individuals: An A-to-Z Guide to Hundreds of Tax Write-Offs	UsedGood	32.36	No		Yes	1	1	0	0	4	0.02	3	0	0	0	0	0
+018-DeseretIndust-8.7.24-Jim-422	X004CLB3UF	1932012850	Exploring Creation with Zoology 3: Land Animals of the Sixth Day (Young Explorer Series)	UsedVeryGood	36.00	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+018-NPS-6.1.24-Jim-586	X0049I9CKT	1982151390	Class: A Memoir of Motherhood, Hunger, and Higher Education	UsedGood	11.49	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+018-NPS-8.19.24-Jim-187	X004D506AN	0520205197	Deep Politics and the Death of JFK	UsedGood	28.00	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+019-DeseretIndust-5.25.24-Jim-841	X0049739WH	1421529130	Tegami Bachi, Letter Bee, Vol. 1: Letter and Letter Bee	UsedGood	18.68	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+019-DeseretIndust-5.28.24-Jim-472	X0049AZWTR	0965175081	The Single Best Investment: Creating Wealth with Dividend Growth	UsedGood	21.77	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+019-DeseretIndust-6.1.24-Jim-056	X0049I7G8T	0061655554	Barbarians at the Gate: The Fall of RJR Nabisco	UsedGood	9.34	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+019-DeseretIndust-6.12.24-Jim-708	X004A095WL	1943366446	Stuffed: Luscious Filled Treats from Savory to Sweet	UsedGood	16.95	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+019-DeseretIndust-6.4.24-Jim-344	X0049MJ27D	0441094996	The Cat Who Walks through Walls	UsedGood	17.13	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+019-DeseretIndust-6.4.24-Jim-849	X0049MEUMZ	1592288642	The Natural Superiority of Mules	UsedGood	24.99	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+019-DeseretIndust-7.12.24-Jim-642	X004BI2UP1	1284096211	Personal and Professional Growth for Health Care Professionals	UsedGood	24.36	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+019-DeseretIndust-7.25.24-Jim-259	X004C23ET7	1523504463	Eight Dates: Essential Conversations for a Lifetime of Love	UsedGood	13.87	No		Yes	0	0	0	0	3	0.02	3	0	0	0	0	0
+019-DeseretIndust-8.19.24-Jim-031	X004D4X6FL	006023413X	Coat of Many Colors	UsedGood	14.92	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+019-DeseretIndust-8.7.24-Jim-033	X004CLB1Q1	1932012737	Exploring Creation with Zoology 2: Swimming Creatures of the Fifth Day, Textbook	UsedVeryGood	24.99	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+019-NPS-6.20.24-Jim-859	X004ADG2BZ	B0BKSCZMXP	Power (Powers Brothers)	UsedGood	17.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+020-DeseretIndust-5.25.24-Jim-727	X0049739YP	1970147008	Together	UsedGood	22.86	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+020-DeseretIndust-5.28.24-Jim-572	X0049B5VJH	0545881048	LEGO Pop-Up	UsedAcceptable	38.88	No		Yes	1	1	0	0	1	0.08	0	0	0	0	0	0
+020-DeseretIndust-6.1.24-Jim-859	X0049I9DZ3	1416550216	Women Who Love Too Much: When You Keep Wishing and Hoping He'll Change	UsedGood	23.15	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+020-DeseretIndust-6.4.24-Jim-834	X0049M9DOP	1524761389	To Shake the Sleeping Self: A Journey from Oregon to Patagonia, and a Quest for a Life with No Regret	UsedGood	13.08	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+020-DeseretIndust-7.12.24-Jim-689	X004BI2TX9	B0107GC3GA	Fallout 4 Vault Dwellers Survival Guide	UsedGood	24.99	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+020-DeseretIndust-7.25.24-Jim-644	X004C28UHX	1594858004	Owl: A Year in the Lives of North American Owls	UsedGood	24.43	No		Yes	1	1	0	0	4	0.06	3	0	0	0	0	0
+020-DeseretIndust-8.19.24-Jim-420	X004D4IGWT	1564020495	East o' the Sun and West o' the Moon (Works in Translation)	UsedGood	21.53	No		Yes	0	0	0	0	0	0	0	0	0	0	0	0
+020-DeseretIndust-8.7.24-Jim-359	X004CLD4O3	1629722901	Our Sweet Basil Kitchen: Fresh Twists on Family Favorites With Recipe Mashups and Unique Flavor Combinations	UsedVeryGood	11.32	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+020-NPS-6.20.24-Jim-776	X004ADSXNZ	1538743167	Unnatural Death: A Scarpetta Novel (Kay Scarpetta)	UsedGood	11.81	No		Yes	1	1	0	0	1	0.06	0	0	0	0	0	0
+021-DeseretIndust-5.25.24-Jim-549	X0049712ZN	1421504901	MAR, Vol. 8	UsedGood	11.66	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+021-DeseretIndust-5.28.24-Jim-841	X0049B7MDF	478901441X	Genki I: An Integrated Course in Elementary Japanese Workbook (Japanese and English Edition)	UsedVeryGood	46.98	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+021-DeseretIndust-6.1.24-Jim-030	X0049I7JYZ	052547997X	Undo It!: How Simple Lifestyle Changes Can Reverse Most Chronic Diseases	UsedGood	16.63	No		Yes	0	0	0	0	0	0.06	0	0	0	0	0	0
+021-DeseretIndust-6.26.24-Jim-174	X004AU5MJV	0021402442	Glencoe Carpentry and Building Construction, Student Edition (CARPENTRY & BLDG CONSTRUCTION)	UsedGood	53.55	No		Yes	0	0	0	0	0	0.1	0	0	0	0	0	0
+021-DeseretIndust-6.4.24-Jim-618	X0049MGPAZ	0063239922	Maybe Next Time: A Reese Witherspoon Book Club Pick	UsedGood	8.76	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+021-DeseretIndust-7.12.24-Jim-816	X004BI2W13	0486293386	Making Furniture Masterpieces: 30 Projects with Measured Drawings (Dover Crafts: Woodworking)	UsedGood	18.49	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+021-DeseretIndust-7.25.24-Jim-993	X004C26SSV	1636413323	The Josiah Manifesto: The Ancient Mystery & Guide for the End Times	UsedGood	12.94	No		Yes	0	0	0	0	3	0.04	3	0	0	0	0	0
+021-DeseretIndust-8.19.24-Jim-665	X004D4WOAJ	1580897878	The Seashore Book	UsedGood	14.56	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+021-DeseretIndust-8.7.24-Jim-754	X004CKY443	1450469434	Periodization Training for Sports	UsedAcceptable	23.40	No		Yes	0	0	0	0	0	0.07	0	0	0	0	0	0
+021-NPS-6.20.24-Jim-050	X004ADW2AP	B0CFCXVPL3	The Fastball: A Sweet Forced Proximity Romance (The Vegas Kings)	UsedGood	13.49	No		Yes	3	3	0	0	3	0.03	0	0	0	0	0	0
+021-NPSAuction-8.29.24-Jim-476	X004DN1AD7	1305100557	Milady Standard Barbering	UsedVeryGood	216.50	No		Yes	2	2	0	0	2	0.09	0	0	0	0	0	0
+021-Thrift-5.20.24-Jim-070	X0048YV2LV	0132288141	Person to Person: Positive Relationships Don't Just Happen	UsedGood	35.00	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+021-Thrift-5.20.24-Jim-290	X0048YV2GL	0863156088	Drawing Geometry: A Primer of Basic Forms for Artists, Designers and Architects	UsedGood	11.94	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+022-DeseretIndust-5.25.24-Jim-325	X00496W4X3	1462115071	Temples: Sacred Symbolism, Eternal Blessings	UsedGood	16.10	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+022-DeseretIndust-5.28.24-Jim-772	X0049B5WW3	0891079920	Because I Love You	UsedVeryGood	26.72	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+022-DeseretIndust-6.26.24-Jim-084	X004AU5NLN	B008M7E0G8	Zones of Regulation	UsedVeryGood	89.99	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+022-DeseretIndust-7.12.24-Jim-087	X004BHTUAZ	037583365X	Cybele's Secret	UsedGood	16.23	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+022-DeseretIndust-7.25.24-Jim-710	X004C226HD	0521781906	Turn Left at Orion: A Hundred Night Sky Objects to See in a Small Telescope - and How to Find Them	UsedGood	22.29	No		Yes	1	1	0	0	4	0.05	3	0	0	0	0	0
+022-DeseretIndust-8.19.24-Jim-549	X004D4TY6V	0295994843	Ready All!	UsedGood	14.73	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+022-DeseretIndust-8.7.24-Jim-268	X004CKT1R3	B000PHBWT6	Children of the Promise, volume 1,2,3,4,5. Rumors of War, Since You Went Away, Far from Home, When We Meet Again, As Long As I Have You [5 volume set]	UsedAcceptable	54.90	No		Yes	0	0	0	0	0	0.28	0	0	0	0	0	0
+022-NPS-6.1.24-Jim-597	X0049I7K49	1956007083	Stolen Youth: How Radicals Are Erasing Innocence and Indoctrinating a Generation	UsedGood	9.97	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+022-Thrift-5.20.24-Jim-953	X0048YU0ZP	0300001371	Psychology and Religion (The Terry Lectures Series)	UsedGood	9.34	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+023-DeseretIndust-5.28.24-Jim-886	X0049B49DL	4789014436	Genki: An Integrated Course in Elementary Japanese II (English and Japanese Edition)	UsedVeryGood	20.95	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+023-DeseretIndust-6.4.24-Jim-265	X0049M9DXV	1615193588	How to Read Water: Clues and Patterns from Puddles to the Sea (Natural Navigation)	UsedGood	16.16	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+023-DeseretIndust-6.4.24-Jim-984	X0049MEVBZ	0966916832	Understanding Body Building Nutrition & Training: Practical, Quick Reference, Answers to Common Bodybuilding Challenges	UsedAcceptable	38.83	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+023-DeseretIndust-7.12.24-Jim-764	X004BI2PDX	0785836969	The Secrets of the Universe in 100 Symbols	UsedAcceptable	19.00	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+023-DeseretIndust-7.25.24-Jim-450	X004C28VA9	0943396425	Build Your Own Telescope: Complete Plans for Five Telescopes You Can Build with Simple Hand Tools	UsedGood	34.99	No		Yes	1	1	0	0	4	0.06	3	0	0	0	0	0
+023-NPS-6.1.24-Jim-295	X0049I7GGV	B09HQ449CZ	God Forgives The Streets Don't	UsedGood	12.55	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+023-NPS-8.19.24-Jim-422	X004D51I0Z	8499929060	C�mo cambiar tu mente / How to Change Your Mind: Lo que la nueva ciencia de la psicodelia nos ense�a sobre la conciencia, la muerte, la adicci�n, la depresi�n y la transcendencia (Spanish Edition)	UsedAcceptable	14.47	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+023-NPSAuction-8.29.24-Jim-182	X004DN9I45	1107690633	North American Cambridge Latin Course Unit 1 Student's Book	UsedAcceptable	35.14	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+023-Thrift-5.20.24-Jim-402	X0048YV5VN	0062675982	BEACH WISH	UsedGood	6.38	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+024-DeseretIndust-5.25.24-Jim-611	X004973AAD	1951329007	A Worthy Opponent (Wicked Villains)	UsedGood	12.58	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+024-DeseretIndust-5.25.24-Jim-967	X00496W55Z	1421510103	Beauty Pop, Vol. 4 (4)	UsedAcceptable	8.15	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+024-DeseretIndust-5.28.24-Jim-438	X0049B7SG1	0824835921	Remembering the Kanji 1: A Complete Course on How Not to Forget the Meaning and Writing of Japanese Characters	UsedVeryGood	27.89	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+024-DeseretIndust-7.12.24-Jim-402	X004BI0CNN	1782216553	Textile Artist: The Seasons in Silk Ribbon Embroidery, The: 20 beautiful designs, techniques and inspiration (The Textile Artist)	UsedGood	26.11	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+024-DeseretIndust-7.25.24-Jim-890	X004C26TFN	0975442805	The Shadow of the Steens	UsedGood	23.39	No		Yes	0	0	0	0	3	0.02	3	0	0	0	0	0
+024-DeseretIndust-8.7.24-Jim-119	X004CKY35N	1592401201	Finding Meaning in the Second Half of Life: How to Finally, Really Grow Up	UsedGood	13.12	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+024-DeseretIndust-8.7.24-Jim-862	X004CKQNL5	168119631X	A Court of Frost and Starlight (A Court of Thorns and Roses)	UsedGood	25.99	No		Yes	1	0	1	0	1	0.04	0	0	0	0	0	0
+024-NPS-6.1.24-Jim-934	X0049I9EFH	0806541776	Living in the Moment: A Guide to Overcoming Challenges and Finding Moments of Joy in Alzheimer's Disease and Other Dementias	UsedAcceptable	12.98	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+024-NPS-6.20.24-Jim-059	X004ADVLYN	1614290385	The Four Foundations of Mindfulness in Plain English	UsedGood	19.98	No		Yes	0	0	0	0	0	0	0	0	0	0	0	0
+024-NPSAuction-8.29.24-Jim-539	X004DN86KH	194717262X	Chemistry 2e by OpenStax (hardcover version, full color)	UsedVeryGood	49.50	No		Yes	1	1	0	0	1	0.11	0	0	0	0	0	0
+025-DeseretIndust-5.25.24-Jim-713	X004974G5L	1421513757	S.A (Special A), Vol. 1	UsedAcceptable	13.32	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+025-DeseretIndust-5.28.24-Jim-228	X0049B4B4N	0446547565	The Last Song	UsedGood	7.05	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+025-DeseretIndust-6.4.24-Jim-482	X0049MHVH1	0062117386	Split Second (Pivot Point, 2)	UsedGood	14.05	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+025-DeseretIndust-7.12.24-Jim-280	X004BI0E4P	1462121837	Sacred Symbols: Finding Meaning in Rites, Rituals and Ordinances	UsedGood	46.39	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+025-DeseretIndust-7.25.24-Jim-346	X004C238HP	1636411428	The Return of the Gods	UsedGood	11.50	No		Yes	0	0	0	0	3	0.03	3	0	0	0	0	0
+025-DeseretIndust-8.7.24-Jim-214	X004CKQNP1	0063204150	Remarkably Bright Creatures: A Novel	UsedGood	15.84	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+025-NPS-6.1.24-Jim-934	X0049I9EHF	195236700X	Minimum Wage Magic: DFZ Book 1	UsedGood	14.90	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+025-NPS-6.20.24-Jim-194	X004ADT1LN	052129164X	Outline of a Theory of Practice (Cambridge Studies in Social and Cultural Anthropology, Series Number 16)	UsedGood	17.95	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+025-NPS-8.19.24-Jim-761	X004D51IIR	1923072021	Blood Bonds (The Bonds that Tie)	UsedGood	17.27	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+025-NPSAuction-8.29.24-Jim-858	X004DN9HS7	1453334262	Exploring Business, Version 4.0 (Silver Level Access Pass)	UsedAcceptable	69.00	No		Yes	1	1	0	0	1	0.07	0	0	0	0	0	0
+026-DeseretIndust-5.25.24-Jim-878	X00496W5MX	1421529505	Tegami Bachi, Letter Bee, Vol. 2: The Letter to Jiggy Pepper	UsedGood	11.02	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+026-DeseretIndust-5.28.24-Jim-995	X0049B5YQR	1606418130	Key Lime Pie (Culinary Mysteries)	UsedGood	17.62	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+026-DeseretIndust-6.4.24-Jim-067	X0049M9G7T	1616960922	The Emperor's Soul	UsedGood	24.57	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+026-DeseretIndust-7.12.24-Jim-149	X004BI0GYD	1633691780	The Innovator's Dilemma: When New Technologies Cause Great Firms to Fail (Management of Innovation and Change)	UsedAcceptable	14.00	No		Yes	1	0	1	0	1	0.02	0	0	0	0	0	0
+026-DeseretIndust-7.25.24-Jim-882	X004C25M3D	1950093174	Bleeding Realms: Dragon Blessed: The Complete Series	UsedGood	38.24	No		Yes	1	1	0	0	4	0.05	3	0	0	0	0	0
+026-DeseretIndust-8.19.24-Jim-114	X004D51NPF	0393037029	Post Captain (Aubrey/Maturin Novels, 2) (Book 2)	UsedGood	22.00	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+026-DeseretIndust-8.7.24-Jim-534	X004CL08GF	B000YQWQZ2	The Kingdom and the Crown Trilogy: Set Vols. 1-3 - Fishers of Men/Come Unto Me/Behold the Man	UsedGood	35.89	No		Yes	1	1	0	0	1	0.21	0	0	0	0	0	0
+026-NPS-6.1.24-Jim-099	X0049I7IYL	1324021306	Danger Zone: The Coming Conflict with China	UsedGood	16.57	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+026-NPS-6.20.24-Jim-462	X004ADQM7J	0140447407	Strange Tales from a Chinese Studio (Penguin Classics)	UsedAcceptable	14.46	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+026-NPSAuction-8.29.24-Jim-123	X004DN8F49	0135227763	Life Span, The: Human Development for Helping Professionals	UsedGood	132.00	No		Yes	1	1	0	0	1	0.07	0	0	0	0	0	0
+027-DeseretIndust-5.28.24-Jim-359	X0049AZZRV	1849056145	Pathological Demand Avoidance Syndrome - My Daughter is Not Naughty	UsedGood	17.33	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+027-DeseretIndust-6.4.24-Jim-662	X0049MHVX5	1555178790	War of the Black Curtain (Jimmy Fincher Saga Book 4) (Jimmie Fincher Saga)	UsedGood	9.58	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+027-DeseretIndust-7.12.24-Jim-175	X004BI2XDZ	1119855012	The Four Factors of Trust: How Organizations Can Earn Lifelong Loyalty	UsedGood	12.97	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+027-DeseretIndust-7.25.24-Jim-240	X004C25M8D	1930748035	The Lost Science of Money: The Mythology of Money, The Story of Power	UsedGood	135.00	No		Yes	1	1	0	0	4	0.07	3	0	0	0	0	0
+027-DeseretIndust-8.19.24-Jim-204	X004D51D7X	0375866574	Shadow Scale (Seraphina Series)	UsedGood	16.25	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+027-NPS-6.20.24-Jim-921	X004ADQTPT	1772290513	Baby Feels (Baby's World)	UsedAcceptable	11.47	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+027-NPS-8.7.24-Jim-307	X004CLFNGZ	0593358295	The Unsinkable Greta James: A Novel	UsedGood	9.30	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+027-NPSAuction-8.29.24-Jim-426	X004DN9NOF	0323831931	HESI Comprehensive Review for the NCLEX-RN� Examination	UsedVeryGood	47.63	No		Yes	1	0	0	1	1	0.03	0	0	0	0	0	0
+028-DeseretIndust-5.28.24-Jim-688	X0049B1RNL	1439191468	Miles to Go: The Second Journal of the Walk Series	UsedGood	7.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+028-DeseretIndust-6.1.24-Jim-323	X0049I7J6N	0764143476	1001 Pitfalls In Spanish (Barron's Foreign Language Guides)	UsedGood	21.92	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+028-DeseretIndust-6.1.24-Jim-556	X0049I9G41	1554813883	Focus on Writing: What College Students Want to Know	UsedGood	28.59	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+028-DeseretIndust-6.20.24-Jim-082	X004ADVNBT	1573456233	The Infinite Atonement	UsedGood	14.80	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+028-DeseretIndust-6.26.24-Jim-522	X004AU1M31	1266153616	Talaro's Foundations in Microbiology ISE	UsedGood	54.00	No		Yes	0	0	0	0	0	0.09	0	0	0	0	0	0
+028-DeseretIndust-6.4.24-Jim-330	X0049MHXYR	1555176976	A Door in the Woods (Jimmy Fincher Saga)	UsedGood	7.99	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+028-DeseretIndust-7.12.24-Jim-675	X004BI0HDX	1796698709	Dad Jokes for Kids and Their Adults! 1000 Clean and Absurdly Lame Jokes that Will Crack Up the Entire Family! (Clean Dad Jokes)	UsedGood	6.53	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+028-DeseretIndust-7.25.24-Jim-813	X004C239MT	111909805X	Foundations of Financial Risk: An Overview of Financial Risk and Risk-based Financial Regulation (Wiley Finance)	UsedGood	53.02	No		Yes	1	1	0	0	4	0.03	3	0	0	0	0	0
+028-DeseretIndust-8.19.24-Jim-522	X004D4XABB	1501184415	Faith: A Journey For All	UsedGood	15.99	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+028-NPS-8.7.24-Jim-630	X004CLLA21	1563926962	Chevrolet Astro and GMC Safari (85-05) Haynes Repair Manual	UsedGood	34.00	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+028-NPSAuction-8.29.24-Jim-192	X004DN9LX3	0323831931	HESI Comprehensive Review for the NCLEX-RN� Examination	UsedVeryGood	47.63	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+029-DeseretIndust-5.28.24-Jim-623	X0049BG0ER	1421524341	The Prince of Tennis, Vol. 33 (33)	UsedGood	239.00	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+029-DeseretIndust-6.1.24-Jim-796	X0049I9G7D	0871238160	The Watchtower Files: Dialogue With a Jehovah's Witness	UsedGood	6.55	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+029-DeseretIndust-6.20.24-Jim-573	X004ADNGRN	0578973839	Ace the Data Science Interview: 201 Real Interview Questions Asked By FAANG, Tech Startups, & Wall Street	UsedAcceptable	40.61	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+029-DeseretIndust-6.26.24-Jim-918	X004AU1MW7	0134421353	Chemistry: An Introduction to General, Organic, and Biological Chemistry	UsedGood	99.46	No		Yes	0	0	0	0	0	0.06	0	0	0	0	0	0
+029-DeseretIndust-6.4.24-Jim-210	X0049MGQDB	0545854423	Broken Ground (Spirit Animals: Fall of the Beasts, Book 2) (2)	UsedGood	10.90	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+029-DeseretIndust-7.25.24-Jim-977	X004C239NN	1493038710	Hiking Yellowstone National Park: A Guide To More Than 100 Great Hikes (Regional Hiking Series)	UsedGood	22.04	No		Yes	0	0	0	0	3	0.03	3	0	0	0	0	0
+029-DeseretIndust-8.19.24-Jim-577	X004D51DCN	039324010X	Broadway: A History of New York City in Thirteen Miles	UsedGood	25.00	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+029-DeseretIndust-8.7.24-Jim-113	X004CLMGIX	0316102253	Moon Boy, Vol. 9 (Volume 9) (Moon Boy, 9)	UsedGood	21.36	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+029-NPS-7.12.24-Jim-420	X004BI0FFN	0979553709	Emotion Code: How to Release Your Trapped Emotions for Abundant Health, Love and Happiness	UsedGood	16.50	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+029-NPSAuction-8.29.24-Jim-097	X004DNDTQX	0133822524	Contract Law for Paralegals: Traditional and e-Contracts	UsedLikeNew	218.47	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+030-DeseretIndust-5.28.24-Jim-374	X0049B4F6H	0345496590	Kitchen Princess 2	UsedAcceptable	13.90	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+030-DeseretIndust-6.1.24-Jim-594	X0049I51M7	1506332358	Visible Learning for Literacy, Grades K-12: Implementing the Practices That Work Best to Accelerate Student Learning (Corwin Literacy)	UsedGood	14.12	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+030-DeseretIndust-6.20.24-Jim-091	X004ADVO59	1849054932	Starving the Anger Gremlin for Children Aged 5-9 (Gremlin and Thief CBT Workbooks)	UsedGood	16.30	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+030-DeseretIndust-6.4.24-Jim-125	X0049M8G9D	0385544235	My Sister, the Serial Killer: A Novel	UsedGood	13.98	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+030-DeseretIndust-7.12.24-Jim-231	X004BI0FPN	0593329732	Uncommon Sense Teaching: Practical Insights in Brain Science to Help Students Learn	UsedGood	13.18	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+030-DeseretIndust-7.25.24-Jim-341	X004C20MQ5	1622957911	A Boy, a Burrito, and a Cookie: From Janitor to Executive	UsedGood	34.00	No		Yes	0	0	0	0	3	0.01	3	0	0	0	0	0
+030-DeseretIndust-8.19.24-Jim-122	X004D51E6N	0850527910	A Military Atlas of the First World War	UsedGood	14.99	No		Yes	1	0	0	1	1	0.04	0	0	0	0	0	0
+030-DeseretIndust-8.7.24-Jim-248	X004CLMP0R	031607778X	Moon Boy, Vol. 7 (Moon Boy, 7) (Volume 7)	UsedAcceptable	22.78	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+030-NPSAuction-8.29.24-Jim-498	X004DN3J13	131923657X	1200 Update Ways of the World with Sources for the AP� Modern Course	UsedLikeNew	109.96	No		Yes	1	1	0	0	1	0.06	0	0	0	0	0	0
+031-DeseretIndust-5.28.24-Jim-471	X0049B4G0H	1598166220	Good Witch of the West, The Volume 3	UsedGood	14.98	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+031-DeseretIndust-6.1.24-Jim-635	X0049IB2U7	0399166521	The Ends of the World (Conspiracy of Us)	UsedGood	16.97	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+031-DeseretIndust-6.1.24-Jim-696	X0049I51RH	1951097955	Facts About Cats and Dogs	UsedGood	52.18	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+031-DeseretIndust-6.4.24-Jim-201	X0049MGQN1	1423645529	Pizzazzerie: Entertain in Style: Tablescapes & Recipes for the Modern Hostess	UsedGood	33.26	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+031-DeseretIndust-6.4.24-Jim-326	X0049M9EU3	1423636120	The French Cook - Souffles: Souffles	UsedAcceptable	59.98	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+031-DeseretIndust-7.12.24-Jim-469	X004BI0FS5	0593135202	Project Hail Mary: A Novel	UsedGood	12.92	No		Yes	0	0	0	0	0	0.06	0	0	0	0	0	0
+031-DeseretIndust-8.19.24-Jim-247	X004D4V91J	1250319854	5 Ingredients Mediterranean: Simple Incredible Food [American Measurements]	UsedGood	23.45	No		Yes	1	0	0	1	1	0.06	0	0	0	0	0	0
+031-DeseretIndust-8.7.24-Jim-244	X004CLMTFX	0316102237	Moon Boy, Vol. 8 (Volume 8) (Moon Boy, 8)	UsedAcceptable	9.89	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+031-NPS-6.20.24-Jim-103	X004ADQVOD	082544859X	The Rare Jewel of Everleigh Wheaton (Treasures of Halstead Manor, 1)	UsedGood	14.98	No		Yes	8	8	0	0	8	0	0	0	0	0	0	0
+031-NPSAuction-8.29.24-Jim-386	X004DNDMOR	1506281214	Anatomy Coloring Book with 450+ Realistic Medical Illustrations with Quizzes for Each + 96 Perforated Flashcards of Muscle Origin, Insertion, Action, and Innervation (Kaplan Test Prep)	UsedAcceptable	34.51	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+031-Thrift-6.26.24-Jim-092	X004AU9EVN	0593230256	Caste: The Origins of Our Discontents	UsedVeryGood	9.76	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+032-DeseretIndust-5.28.24-Jim-331	X0049B8UA9	1401211623	Time Guardian 2	UsedAcceptable	86.73	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+032-DeseretIndust-6.1.24-Jim-911	X0049IB2VB	0425170594	The Lost Bird	UsedGood	8.43	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+032-DeseretIndust-6.4.24-Jim-142	X0049M8GJX	0743298071	Once Upon a River: A Novel	UsedGood	10.99	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+032-DeseretIndust-7.12.24-Jim-690	X004BI0JSL	1950259269	Dead Inside	UsedGood	17.96	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+032-DeseretIndust-7.25.24-Jim-673	X004C28XF7	1418080918	Oran's Dictionary of the Law	UsedGood	80.54	No		Yes	0	0	0	0	3	0.04	3	0	0	0	0	0
+032-NPS-7.25.24-Jim-631	X004C23ASR	1984826832	Who Do You Say I Am?: Daily Reflections on the Bible, the Saints, and the Answer That Is Christ	UsedGood	14.39	No		Yes	2	2	0	0	8	0.02	6	0	0	0	0	0
+032-NPS-8.19.24-Jim-705	X004D50AS1	3836527839	Marc Chagall, 1887-1985: Painting As Poetry: English Edition	UsedGood	13.60	No		Yes	1	0	0	1	1	0.03	0	0	0	0	0	0
+032-NPSAuction-8.29.24-Jim-864	X004DN8GPH	1138692522	The Anthropology of Religion, Magic, and Witchcraft	UsedAcceptable	108.16	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+032-Thrift-6.26.24-Jim-822	X004AU9EXB	B0B3BGX8LY	Project 369: The Key To Wealth, Abundance & Prosperity	UsedVeryGood	27.00	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+033-DeseretIndust-6.1.24-Jim-099	X0049I9HGX	0316601039	Cold Zero: Inside the FBI Hostage Rescue Team	UsedAcceptable	8.16	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+033-DeseretIndust-6.4.24-Jim-505	X0049M8GPR	0977723607	Keys to the Vault: Lessons From the Pros on Raising Money and Igniting Your Business	UsedGood	26.95	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+033-DeseretIndust-7.12.24-Jim-639	X004BI0JTP	1590203356	Psycho: A Novel	UsedGood	11.50	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+034-DeseretIndust-5.28.24-Jim-744	X0049BGQR3	0451475763	Never Ever	UsedGood	16.55	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+034-DeseretIndust-6.4.24-Jim-378	X0049MGSV1	1626250766	The Untethered Soul: The Journey Beyond Yourself	UsedGood	9.68	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+034-DeseretIndust-7.12.24-Jim-842	X004BI2YJX	1951971035	Goddess of Filth	UsedGood	13.40	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+034-NPS-6.1.24-Jim-204	X0049I9HQX	B0BRZTG4TD	The Boy From Block 66: A WW2 Jewish Holocaust Survival True Story (Heroic Children of World War II)	UsedAcceptable	14.57	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+034-NPS-7.25.24-Jim-980	X004C20O2R	1632174553	Chinese Soul Food: A Friendly Guide for Homemade Dumplings, Stir-Fries, Soups, and More	UsedGood	17.47	No		Yes	1	1	0	0	4	0.03	3	0	0	0	0	0
+035-DeseretIndust-5.28.24-Jim-259	X0049B9YBX	1665711396	The Next Cmo: A Guide to Operational Marketing Excellence	UsedGood	5.98	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+035-DeseretIndust-6.1.24-Jim-173	X0049I9JNJ	0312265867	To the Nines: Stephanie Plum Novels	UsedGood	8.99	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+035-DeseretIndust-6.4.24-Jim-520	X0049MGT3N	0803667043	Phillips's Manual of I.V. Therapeutics: Evidence-Based Practice for Infusion Therapy	UsedGood	18.55	No		Yes	0	0	0	0	0	0.06	0	0	0	0	0	0
+035-DeseretIndust-7.12.24-Jim-538	X004BI0L5H	B099FZ287G	Only The Stains Remain	UsedGood	10.48	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+035-DeseretIndust-7.25.24-Jim-499	X004C20KA3	0981957641	Sexual Wholeness in Marriage: An LDS Perspective on Integrating Sexuality and Spirituality in Our Marriages	UsedAcceptable	18.97	No		Yes	0	0	0	0	3	0.03	3	0	0	0	0	0
+035-DeseretIndust-8.19.24-Jim-275	X004D4SRNH	B0BW32LXTQ	Betting on the Boy Next Door: a Sweet Romantic Comedy (Betting on Love)	UsedGood	14.91	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+035-NPS-5.21.24-Jim-132	X00490JXIN	1443425311	Made In Quebec	UsedGood	12.81	No		Yes	0	0	0	0	0	0.06	0	0	0	0	0	0
+036-DeseretIndust-5.28.24-Jim-892	X0049BGC09	1616287330	Taco Night (Williams-Sonoma)	UsedGood	15.51	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+036-DeseretIndust-6.1.24-Jim-277	X0049IE9X9	1951097955	Facts About Cats and Dogs	UsedGood	28.50	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+036-DeseretIndust-6.4.24-Jim-055	X0049MJF6V	1555177530	A Gift of Ice (The Jimmy Fincher Saga, 2)	UsedGood	7.97	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+036-DeseretIndust-7.12.24-Jim-636	X004BI3OUL	1608613763	Friends & Foes	UsedGood	11.99	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+036-DeseretIndust-7.25.24-Jim-729	X004C25PAX	1947888323	Three Lines in a Circle: The Exciting Life of the Peace Symbol	UsedGood	14.03	No		Yes	1	1	0	0	4	0.03	3	0	0	0	0	0
+036-DeseretIndust-8.19.24-Jim-129	X004D50CUR	067492438X	The United States and China: Fourth Edition, Revised and Enlarged (American Foreign Policy Library)	UsedAcceptable	19.99	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+036-NPS-5.21.24-Jim-369	X00490NR3F	1543590934	10-minute Engineering Projects (10-minute Makers)	UsedGood	21.14	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+037-DeseretIndust-6.4.24-Jim-307	X0049MGS4X	1555178014	Tower of Air (Jimmy Fincher Saga)	UsedGood	8.49	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+037-DeseretIndust-7.12.24-Jim-533	X004BI3YD3	0063054159	Vita Nostra: A Novel (Vita Nostra, 1)	UsedGood	12.95	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+037-DeseretIndust-7.25.24-Jim-712	X004C26W19	0998437328	Classical Conversations Latin Workspace B	UsedAcceptable	17.97	No		Yes	0	0	0	0	3	0.05	3	0	0	0	0	0
+037-DeseretIndust-8.19.24-Jim-752	X004D4VDVP	0063235420	Really Good, Actually: A Novel	UsedGood	10.99	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+037-NPS-5.21.24-Jim-752	X00490SQT5	0809105268	Madeleine Sophie Barat: A Life	UsedGood	31.46	No		Yes	1	1	0	0	1	0.05	0	0	0	0	0	0
+037-NPS-6.1.24-Jim-946	X0049IB4AZ	0140253009	Travels and Other Writings (Classic, Nature, Penguin)	UsedAcceptable	43.07	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+038-DeseretIndust-6.4.24-Jim-992	X0049MJHNH	0916764206	Nutrition and Physical Degeneration	UsedGood	23.81	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+038-DeseretIndust-7.12.24-Jim-759	X004BI3YDN	165179605X	Daughter Of Paris: The Diary of Marie Duplessis, France�s Most Celebrated Courtesan (Biographical Novels)	UsedGood	15.29	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+038-DeseretIndust-7.25.24-Jim-757	X004C26W1T	0996566023	Henle Latin Workspace A	UsedAcceptable	26.93	No		Yes	0	0	0	0	3	0.04	3	0	0	0	0	0
+038-DeseretIndust-8.19.24-Jim-957	X004D4ST99	1879628333	Legendary Lake Pend Oreille	UsedGood	19.94	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+038-NPS-5.21.24-Jim-291	X00490PP0X	0593239210	Crazy Faith: It's Only Crazy Until It Happens	UsedGood	6.16	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+039-DeseretIndust-7.12.24-Jim-058	X004BI0KVH	1937011224	Hidden Mickeys Go To Sea: A Field Guide to the Disney Cruise Line�s Best Kept Secrets	UsedGood	25.00	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+039-DeseretIndust-7.25.24-Jim-615	X004C1YTMT	B000PHBWT6	Children of the Promise, volume 1,2,3,4,5. Rumors of War, Since You Went Away, Far from Home, When We Meet Again, As Long As I Have You [5 volume set]	UsedVeryGood	70.95	No		Yes	1	1	0	0	4	0.28	3	0	0	0	0	0
+039-NPS-5.21.24-Jim-604	X00490JY2N	1493014196	Hiking Colorado: A Guide To The State's Greatest Hiking Adventures (State Hiking Guides Series)	UsedGood	9.99	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+040-DeseretIndust-6.4.24-Jim-130	X0049MCG35	162972565X	A Case for the Book of Mormon	UsedGood	18.46	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+040-DeseretIndust-6.4.24-Jim-584	X0049MGTID	1629729787	The Holy Spirit: His Identity, Mission, and Ministry	UsedGood	12.97	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+040-DeseretIndust-7.12.24-Jim-876	X004BI3PJ1	0812928318	Pumping Irony: Working Out the Angst of a Lifetime	UsedGood	20.35	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+040-DeseretIndust-7.25.24-Jim-670	X004C26YM1	1568493673	The Naked Communist	UsedAcceptable	58.98	No		Yes	1	1	0	0	4	0.03	3	0	0	0	0	0
+040-DeseretIndust-8.19.24-Jim-263	X004D4STZD	1629727288	Eve and Adam: Discovering the Beautiful Balance	UsedGood	15.90	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+040-NPS-5.21.24-Jim-850	X00490JY2X	1493014196	Hiking Colorado: A Guide To The State's Greatest Hiking Adventures (State Hiking Guides Series)	UsedGood	9.99	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+040-NPS-6.20.24-Jim-008	X004ADUEC3	0825448204	The Tangled Tale of the Woolgathering Castoffs	UsedGood	9.89	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+041-DeseretIndust-7.12.24-Jim-442	X004BI0M5L	0887300405	The E-Myth: Why Most Businesses Don't Work and What to Do About It	UsedAcceptable	29.20	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+041-DeseretIndust-7.25.24-Jim-973	X004C26Z2Z	052561947X	The Ferryman: A Novel	UsedGood	12.37	No		Yes	1	1	0	0	4	0.07	3	0	0	0	0	0
+041-DeseretIndust-8.19.24-Jim-734	X004D50E0Z	1462113982	Beyond Mile Maker 80: Choosing Joy After Tragic Loss	UsedGood	21.35	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+041-DeseretIndust-8.19.24-Jim-890	X004D4STXP	0393881725	Stiff: The Curious Lives of Human Cadavers	UsedGood	13.56	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+041-NPS-5.21.24-Jim-249	X00490IVV3	0063258668	Endgame: Inside the Royal Family and the Monarchy's Fight for Survival	UsedVeryGood	11.88	No		Yes	4	4	0	0	4	0.05	0	0	0	0	0	0
+042-DeseretIndust-6.4.24-Jim-298	X0049MGWL7	B003AO75AQ	The Work And The Glory Gerald Lund 9 Volume Hardcover Set Vol 1. Pillar of Light 2. Like a Fire is Burning 3. Truth will Prevail 4. Thy Gold To Refine 5. A seson of Joy 6. Praise The Man 7. No Unhallowed Hand 8. So Great a Cause 9. All is Well (The Work And The Glory, Complete 9 Volume set)	UsedGood	68.55	No		Yes	0	0	0	0	0	0.91	0	0	0	0	0	0
+042-DeseretIndust-7.12.24-Jim-451	X004BI3WAX	1503939502	The Roses of May (The Collector, 2)	UsedGood	12.99	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+042-DeseretIndust-7.25.24-Jim-788	X004C26Z9N	0718039874	Forgiving What You Can't Forget: Discover How to Move On, Make Peace with Painful Memories, and Create a Life That�s Beautiful Again	UsedGood	13.29	No		Yes	0	0	0	0	3	0.03	3	0	0	0	0	0
+042-DeseretIndust-8.19.24-Jim-718	X004D51X4B	1422188612	The First 90 Days: Proven Strategies for Getting Up to Speed Faster and Smarter, Updated and Expanded	UsedGood	12.22	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+043-DeseretIndust-7.12.24-Jim-462	X004BHVRHJ	1728239222	The Ravenous Dead (Gravekeeper, 2)	UsedGood	12.49	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+043-DeseretIndust-7.25.24-Jim-229	X004C23KA5	1640951830	Outwitting the Devil: The Secrets to Freedom and Success (Official Publication of the Napoleon Hill Foundation)	UsedGood	15.00	No		Yes	1	1	0	0	4	0.02	3	0	0	0	0	0
+043-DeseretIndust-8.19.24-Jim-761	X004D51R1P	1629728306	Daily Joy: A Devotional For Each Day of the Year	UsedGood	9.10	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+043-NPS-6.4.24-Jim-995	X0049MJUFH	1982151390	Class: A Memoir of Motherhood, Hunger, and Higher Education	UsedAcceptable	11.49	No		Yes	0	0	0	0	0	0.04	0	0	0	0	0	0
+044-DeseretIndust-7.12.24-Jim-919	X004BI0MY7	1728239214	The Whispering Dead (Gravekeeper, 1)	UsedGood	9.57	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+044-DeseretIndust-7.25.24-Jim-623	X004C1YW3P	1501105779	Before We Were Strangers: A Love Story	UsedGood	9.29	No		Yes	0	0	0	0	3	0.02	3	0	0	0	0	0
+044-NPS-6.4.24-Jim-615	X0049MJQ9H	1737900408	Ruthless Equity: Disrupt the Status Quo and Ensure Learning for ALL Students	UsedAcceptable	16.90	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+045-DeseretIndust-5.23.24-Jim-268	X00494K35V	1427811563	Gakuen Alice Volume 14	UsedAcceptable	42.98	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+045-DeseretIndust-7.12.24-Jim-933	X004BI0MYH	1629727784	Spirit: The Gift That Connects You to Heaven	UsedGood	13.64	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+045-NPS-6.20.24-Jim-688	X004ADNKLF	1710086726	Hidden Miles: A Wounded Hero Romance	UsedGood	13.49	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+045-NPS-6.4.24-Jim-168	X0049MJV3N	1737900408	Ruthless Equity: Disrupt the Status Quo and Ensure Learning for ALL Students	UsedGood	18.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+045-NPS-7.25.24-Jim-970	X004C23KL9	1595622241	It's the Manager: Moving From Boss to Coach	UsedGood	11.29	No		Yes	0	0	0	0	3	0.04	3	0	0	0	0	0
+046-DeseretIndust-5.23.24-Jim-566	X00494K49B	1591820553	Mars #4	UsedAcceptable	9.99	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+046-DeseretIndust-7.12.24-Jim-606	X004BI3QMH	1916366937	A Dowry of Blood	UsedGood	49.89	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+046-DeseretIndust-8.19.24-Jim-877	X004D4U85R	1423490894	School For Violin Technics: Complete Books 1-3 And Complete Scale Studies (Schirmer's Library of Musical Classics, 2090)	UsedGood	7.83	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+046-NPS-6.20.24-Jim-688	X004ADNKLP	1710080353	Forbidden Miles: A Brother's Best Friend Romance	UsedGood	9.39	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+046-NPS-6.4.24-Jim-006	X0049MEZR5	1737900408	Ruthless Equity: Disrupt the Status Quo and Ensure Learning for ALL Students	UsedGood	16.90	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+046-NPS-7.25.24-Jim-921	X004C23LAT	1573456233	The Infinite Atonement	UsedGood	12.78	No		Yes	1	1	0	0	4	0.04	3	0	0	0	0	0
+047-DeseretIndust-5.23.24-Jim-350	X00494CHX7	1593079362	Blood+ Volume 3 (Manga)	UsedAcceptable	13.98	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+047-DeseretIndust-7.12.24-Jim-568	X004BI40HH	110197186X	The Invited: A Novel	UsedGood	13.24	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+047-DeseretIndust-8.19.24-Jim-855	X004D4XKM5	B000PHBWT6	Children of the Promise, volume 1,2,3,4,5. Rumors of War, Since You Went Away, Far from Home, When We Meet Again, As Long As I Have You [5 volume set]	UsedGood	62.50	No		Yes	0	0	0	0	0	0.28	0	0	0	0	0	0
+047-NPS-6.4.24-Jim-508	X0049MJQC9	1737900408	Ruthless Equity: Disrupt the Status Quo and Ensure Learning for ALL Students	UsedGood	18.99	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+047-NPS-7.25.24-Jim-034	X004C274UH	1338835505	Claudia and the Bad Joke: A Graphic Novel (The Baby-sitters Club #15) (The Baby-Sitters Club Graphix)	UsedGood	6.29	No		Yes	0	0	0	0	3	0.02	3	0	0	0	0	0
+048-DeseretIndust-5.23.24-Jim-787	X00494KATZ	1598168622	Fruits Basket, Vol. 18	UsedAcceptable	18.97	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+048-DeseretIndust-7.12.24-Jim-857	X004BHVS8R	1570089841	Yearning for the Living God: Reflections from the Life of F. Enzio Busche	UsedGood	14.67	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+048-DeseretIndust-8.19.24-Jim-051	X004D4VK6D	B003AO75AQ	The Work And The Glory Gerald Lund 9 Volume Hardcover Set Vol 1. Pillar of Light 2. Like a Fire is Burning 3. Truth will Prevail 4. Thy Gold To Refine 5. A seson of Joy 6. Praise The Man 7. No Unhallowed Hand 8. So Great a Cause 9. All is Well (The Work And The Glory, Complete 9 Volume set)	UsedGood	74.99	No		Yes	1	1	0	0	1	0.91	0	0	0	0	0	0
+048-NPS-6.20.24-Jim-124	X004ADTE79	1565341953	The Yearbook of Education Law 2023	UsedGood	109.47	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+048-NPS-6.20.24-Jim-168	X004ADG7G5	0486678709	Introduction to Graph Theory (Dover Books on Mathematics)	UsedGood	10.51	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+048-NPS-7.25.24-Jim-473	X004C25S7X	059364171X	Angels Fall	UsedGood	7.09	No		Yes	1	1	0	0	4	0.02	3	0	0	0	0	0
+049-Bookmine-Amaz-8.19.24-Jim-846	X004D4Y2JP	126036657X	Let's Code It! 2019-2020 Code Edition	UsedGood	65.00	No		Yes	1	0	0	1	1	0.09	0	0	0	0	0	0
+049-DeseretIndust-5.23.24-Jim-655	X00494CJAX	1591166829	X/1999, Vol. 17: Suite	UsedAcceptable	12.01	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+049-DeseretIndust-7.12.24-Jim-656	X004BI41CB	0967202612	How to Hydroponics	UsedGood	13.69	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+049-DeseretIndust-8.19.24-Jim-803	X004D5275P	1629720410	What Makes Us Sisters	UsedGood	10.97	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+049-NPS-6.20.24-Jim-677	X004ADQYLX	0982338317	The Nourishing Traditions Book of Baby & Child Care	UsedGood	19.16	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+049-NPS-7.25.24-Jim-104	X004C23M0D	1529049423	Casting Off (Cazalet Chronicles)	UsedGood	20.63	No		Yes	1	1	0	0	4	0.04	3	0	0	0	0	0
+050-Bookmine-Amaz-8.19.24-Jim-009	X004D51VGL	126036657X	Let's Code It! 2019-2020 Code Edition	UsedAcceptable	58.98	No		Yes	1	0	0	1	1	0.09	0	0	0	0	0	0
+050-Bookmine-Amaz-8.19.24-Jim-790	X004D4XYW1	1284173259	Essentials of Public Health (Essential Public Health)	UsedAcceptable	39.95	No		Yes	2	0	0	2	2	0.03	0	0	0	0	0	0
+050-Bookmine-Amaz-8.19.24-Jim-945	X004D4Y029	1284173259	Essentials of Public Health (Essential Public Health)	UsedGood	39.95	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+050-DeseretIndust-5.23.24-Jim-334	X00494KBVH	1421513919	Uzumaki, Volume 3 (2nd Edition)	UsedAcceptable	29.34	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+050-DeseretIndust-7.12.24-Jim-253	X004BHVTAJ	1784969303	Hallowed Knights: Black Pyramid (2)	UsedGood	44.81	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+050-NPS-6.20.24-Jim-907	X004ADVPXZ	1250887933	Only If You're Lucky: A Novel	UsedAcceptable	18.29	No		Yes	0	0	0	0	0	0.05	0	0	0	0	0	0
+050-NPS-7.25.24-Jim-661	X004C23M67	0785211578	Where to Find It in the Bible: The Ultimate A to Z Resource	UsedGood	8.29	No		Yes	0	0	0	0	3	0.06	3	0	0	0	0	0
+051-DeseretIndust-5.23.24-Jim-751	X00494F45F	1591826276	Pita-Ten, Volume 1	UsedAcceptable	8.09	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+051-DeseretIndust-7.12.24-Jim-692	X004BI4JS7	1784966215	Plague Garden (1) (Hallowed Knights)	UsedGood	35.51	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+051-NPS-6.20.24-Jim-024	X004ADVQ2F	1648764916	The Fascinating Engineering Book for Kids: 500 Dynamic Facts! (Fascinating Facts)	UsedGood	10.75	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+051-NPS-7.25.24-Jim-829	X004C23MAX	1465458565	The Psychology Book: Big Ideas Simply Explained (DK Big Ideas)	UsedGood	9.61	No		Yes	0	0	0	0	3	0.07	3	0	0	0	0	0
+052-DeseretIndust-5.23.24-Jim-944	X00494F4F5	1591820561	Mars, Book 5	UsedAcceptable	22.49	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+052-DeseretIndust-7.12.24-Jim-054	X004BI4JSR	0142180092	Nuns and Soldiers (Penguin Twentieth-Century Classics)	UsedGood	15.47	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+052-NPS-7.25.24-Jim-820	X004C25SP5	052561849X	The Wedding Guest: An Alex Delaware Novel	UsedGood	11.89	No		Yes	1	1	0	0	4	0.05	3	0	0	0	0	0
+053-DeseretIndust-5.23.24-Jim-649	X00494RNCR	1451623534	For the Common Defense: A Military History of the United States from 1607 to 2012, 3rd Edition	UsedGood	14.95	No		Yes	0	0	0	0	0	0.06	0	0	0	0	0	0
+053-DeseretIndust-6.20.24-Jim-709	X004ADUG3F	1529406366	Before and After: the incredible real-life story behind the heart-breaking bestseller Before We Were Yours	UsedGood	9.98	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+053-DeseretIndust-7.12.24-Jim-005	X004BI4KN1	0345442725	"It Was a Dark and Stormy Night, Snoopy"	UsedGood	14.81	No		Yes	0	0	0	0	0	0.01	0	0	0	0	0	0
+053-DeseretIndust-7.25.24-Jim-328	X004C275U1	0520066103	Mandarin Chinese: A Functional Reference Grammar	UsedGood	14.45	No		Yes	0	0	0	0	3	0.04	3	0	0	0	0	0
+054-DeseretIndust-5.23.24-Jim-159	X00494MWA5	1621578763	It Wasn't About Slavery: Exposing the Great Lie of the Civil War	UsedGood	55.56	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+054-DeseretIndust-6.20.24-Jim-565	X004ADTHWL	B09NR5R6DB	A New Life Promise: How to Heal Your Body, Find Joy, and Bring Glory to God	UsedGood	16.19	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+054-DeseretIndust-7.12.24-Jim-139	X004BI4KZT	B000YQWQZ2	The Kingdom and the Crown Trilogy: Set Vols. 1-3 - Fishers of Men/Come Unto Me/Behold the Man	UsedGood	37.85	No		Yes	1	1	0	0	1	0.21	0	0	0	0	0	0
+054-NPS-7.25.24-Jim-107	X004C22777	B09WHQBXJK	My Daughter�s Keeper: A WW2 Historical Novel, Based on a True Story of a Jewish Holocaust Survivor (World War II Brave Women Fiction)	UsedGood	12.99	No		Yes	0	0	0	0	3	0.03	3	0	0	0	0	0
+055-DeseretIndust-5.23.24-Jim-649	X00494MUZH	1401205364	Swan VOL 02 (Swan (Graphic Novels))	UsedAcceptable	32.00	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+055-DeseretIndust-6.20.24-Jim-139	X004ADWA75	0932940021	Encyclopedia of 7700 Illustrations: Signs of the Times	UsedGood	20.99	No		Yes	0	0	0	0	0	0.09	0	0	0	0	0	0
+055-NPS-7.25.24-Jim-048	X004C27673	1401341187	The Bag Lady Papers: The Priceless Experience of Losing It All	UsedGood	11.00	No		Yes	1	1	0	0	4	0.02	3	0	0	0	0	0
+056-DeseretIndust-7.25.24-Jim-700	X004C20TUJ	0143111884	Psycho-Cybernetics Deluxe Edition: The Original Text of the Classic Guide to a New Life	UsedAcceptable	16.19	No		Yes	0	0	0	0	3	0.03	3	0	0	0	0	0
+057-DeseretIndust-5.23.24-Jim-377	X00494N083	0975475827	Private Access: Behind the Gates of America's Premiere Horse Farms and Ranches	UsedGood	63.97	No		Yes	1	1	0	0	1	0.1	0	0	0	0	0	0
+057-DeseretIndust-7.25.24-Jim-688	X004C272ZJ	1628603917	Keto Air Fryer: 100+ Delicious Low-Carb Recipes to Heal Your Body & Help You Lose Weight	UsedGood	15.13	No		Yes	0	0	0	0	3	0.03	3	0	0	0	0	0
+058-DeseretIndust-7.25.24-Jim-290	X004C20UC1	1950057100	BIFF for CoParent Communication: Your Guide to Difficult Texts, Emails, and Social Media Posts (Conflict Communication Series, 3)	UsedGood	14.00	No		Yes	1	1	0	0	4	0.01	3	0	0	0	0	0
+059-DeseretIndust-5.23.24-Jim-656	X00494WA1L	1462121543	Gourmet Popcorn: 100 Recipes for Any Occasion	UsedGood	29.77	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+059-DeseretIndust-5.23.24-Jim-823	X00494OR0D	1606412302	Finding God in the Garden: Planting, Pruning, and the Plan of Happiness	UsedGood	17.53	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+059-DeseretIndust-7.25.24-Jim-780	X004C273E9	1250864623	Killing the Mob (Bill O'Reilly's Killing Series)	UsedAcceptable	12.14	No		Yes	0	0	0	0	3	0.02	3	0	0	0	0	0
+060-DeseretIndust-5.23.24-Jim-985	X00494WBG5	141663066X	The Definitive Guide to Instructional Coaching: Seven Factors for Success	UsedGood	12.93	No		Yes	0	0	0	0	0	0.03	0	0	0	0	0	0
+060-DeseretIndust-7.25.24-Jim-355	X004C20UP3	1629722154	Bonds that Make Us Free: Healing Our Relationships, Coming to Ourselves	UsedAcceptable	18.03	No		Yes	1	1	0	0	4	0.03	3	0	0	0	0	0
+061-DeseretIndust-5.23.24-Jim-108	X00494WBH9	1936706210	Uncovering the Logic of English: A Common-Sense Approach to Reading, Spelling, and Literacy	UsedGood	12.89	No		Yes	0	0	0	0	0	0.02	0	0	0	0	0	0
+061-DeseretIndust-7.25.24-Jim-590	X004C25JZJ	0760312168	Dry Lakes and Drag Strips: The American Hot Rod	UsedAcceptable	29.68	No		Yes	1	1	0	0	4	0.03	3	0	0	0	0	0
+062-DeseretIndust-5.23.24-Jim-816	X00494QPGH	1629721484	The Holy Week for Latter-day Saint Families	UsedGood	6.99	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+062-NPS-7.25.24-Jim-448	X004C25KQR	B003XNBZK0	Gig Book 1	UsedGood	37.75	No		Yes	1	1	0	0	4	0.06	3	0	0	0	0	0
+063-DeseretIndust-5.23.24-Jim-349	X00494QRW9	1639930310	The Law of Love	UsedGood	12.74	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
+063-DeseretIndust-7.25.24-Jim-564	X004C22A6F	0990997634	Tree Spirits	UsedGood	10.47	No		Yes	0	0	0	0	3	0.02	3	0	0	0	0	0
+064-DeseretIndust-5.23.24-Jim-395	X00494QPIF	1608180670	To the Ocean Deep (Great Expeditions)	UsedGood	10.50	No		Yes	1	1	0	0	1	0.02	0	0	0	0	0	0
+064-DeseretIndust-7.25.24-Jim-665	X004C22AHT	B003AO75AQ	The Work And The Glory Gerald Lund 9 Volume Hardcover Set Vol 1. Pillar of Light 2. Like a Fire is Burning 3. Truth will Prevail 4. Thy Gold To Refine 5. A seson of Joy 6. Praise The Man 7. No Unhallowed Hand 8. So Great a Cause 9. All is Well (The Work And The Glory, Complete 9 Volume set)	UsedGood	68.55	No		Yes	0	0	0	0	1	0.91	1	0	0	0	0	0
+064-DeseretIndust-7.30.24-Jim-805	X004C8RTWJ	140196995X	10x Is Easier Than 2x: How World-Class Entrepreneurs Achieve More by Doing Less	UsedGood	14.21	No		Yes	0	0	0	0	2	0.03	2	0	0	0	0	0
+065-DeseretIndust-7.26.24-Jim-408	X004C3LIQR	0870449702	Historical Atlas of the United States	UsedGood	60.00	No		Yes	0	0	0	0	1	0.22	1	0	0	0	0	0
+065-DeseretIndust-7.30.24-Jim-675	X004C8OGVB	B08XLLF3PG	Stop Overthinking: 23 Techniques to Relieve Stress, Stop Negative Spirals, Declutter Your Mind, and Focus on the Present (The Path to Calm)	UsedGood	10.24	No		Yes	0	0	0	0	2	0.02	2	0	0	0	0	0
+066-DeseretIndust-5.23.24-Jim-486	X00494N1QJ	0345508238	School Rumble 14/15/16	UsedGood	49.90	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+066-DeseretIndust-5.23.24-Jim-797	X00494URBB	B003AO75AQ	The Work And The Glory Gerald Lund 9 Volume Hardcover Set Vol 1. Pillar of Light 2. Like a Fire is Burning 3. Truth will Prevail 4. Thy Gold To Refine 5. A seson of Joy 6. Praise The Man 7. No Unhallowed Hand 8. So Great a Cause 9. All is Well (The Work And The Glory, Complete 9 Volume set)	UsedGood	74.45	No		Yes	0	0	0	0	0	0.91	0	0	0	0	0	0
+066-DeseretIndust-7.26.24-Jim-971	X004C3NN6Z	0880292393	The Wall Chart of World History: From Earliest Times To The Present	UsedGood	39.99	No		Yes	0	0	0	0	3	0.06	3	0	0	0	0	0
+066-DeseretIndust-7.30.24-Jim-712	X004C8TTKT	069112745X	Sacred Mathematics: Japanese Temple Geometry	UsedGood	27.69	No		Yes	0	0	0	0	2	0.06	2	0	0	0	0	0
+067-DeseretIndust-7.30.24-Jim-155	X004C8TTQ3	0593115058	The Tiny Chef: and da mishing weshipee blook	UsedGood	9.85	No		Yes	1	1	0	0	3	0.02	2	0	0	0	0	0
+067-NPS-5.23.24-Jim-207	X00494WBWJ	1982187689	Dumb Ideas: A Behind-the-Scenes Expos� on Making Pranks and Other Stupid Creative Endeavors (and How You Can Also Too!)	UsedAcceptable	14.66	No		Yes	1	1	0	0	1	0.04	0	0	0	0	0	0
+068-DeseretIndust-7.30.24-Jim-969	X004C8OHBF	0769263054	Green Day - Nimrod	UsedAcceptable	28.99	No		Yes	1	1	0	0	3	0.02	2	0	0	0	0	0
+069-DeseretIndust-7.30.24-Jim-387	X004C8TXLT	1496458273	The Peasant King	UsedGood	12.03	No		Yes	0	0	0	0	1	0.04	1	0	0	0	0	0
+069-DeseretIndust-7.30.24-Jim-845	X004C8OHER	1496458273	The Peasant King	UsedAcceptable	12.03	No		Yes	0	0	0	0	1	0.04	1	0	0	0	0	0
+070-DeseretIndust-7.30.24-Jim-395	X004C8OJE5	B003AO75AQ	The Work And The Glory Gerald Lund 9 Volume Hardcover Set Vol 1. Pillar of Light 2. Like a Fire is Burning 3. Truth will Prevail 4. Thy Gold To Refine 5. A seson of Joy 6. Praise The Man 7. No Unhallowed Hand 8. So Great a Cause 9. All is Well (The Work And The Glory, Complete 9 Volume set)	UsedGood	74.99	No		Yes	1	1	0	0	2	0.91	1	0	0	0	0	0
+072-NPS-5.23.24-Jim-581	X00494VZET	1118862414	Managing the Unexpected: Sustained Performance in a Complex World	UsedGood	8.92	No		Yes	1	1	0	0	1	0.03	0	0	0	0	0	0
+073-NPS-5.23.24-Jim-641	X00494OS6B	1784887358	Self-care for Eco-Anxiety: 52 Weekly Practices for Positive, Personal Change Through the Power of Nature	UsedAcceptable	15.71	No		Yes	1	1	0	0	1	0.01	0	0	0	0	0	0
