@@ -1,5 +1,7 @@
 import Image from "next/image"
-import styles from "./page.module.css"
+import styles from "./Home.module.css"
+import tabParser from 'papaparse'
+
 import { getInventoryReport } from "./amazon/seller-api-reports";
 // import { useState } from 'react'
 
@@ -17,32 +19,40 @@ https://sellercentral.amazon.com/apps/authorize/consent?application_id={your app
 */
 export default async function Home() {
   const inventoryReport = await getInventoryReport()
-  const filteredSummaries = [];
-  console.log(inventoryReport)
-  // const listings = await fetchFbaInventorySummaries()
-
-  // let filteredSummaries = []
-  // if (listings && listings.payload && listings.payload.inventorySummaries) {
-  //   filteredSummaries = listings.payload.inventorySummaries.filter(s => s.inventoryDetails.fulfillableQuantity > 0)
-  // } else {
-  //   console.error('No inventory data received');
-  // }
+  const parseConfig = {
+    delimiter: '\t',
+    header: true,
+    dynamicTyping: true
+  }
+  const records = tabParser.parse(inventoryReport, parseConfig).data
+  console.log(records[0])
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Seller Inventory</h1>
-      {filteredSummaries.length > 0 ? (
-        <ul>
-          {filteredSummaries.map((item, index) => (
-            <li key={index}>
-              <p>ASIN: {item.asin}</p>
-              <p>FNSKU: {item.fnSku}</p>
-              <p>SKU: {item.sellerSku}</p>
-              <p>Title: {item.productName}</p>
-              {/* <p>Price: {item.price ? item.price.amount : 'N/A'}</p>
-              <p>Rank: {item.salesRankings ? item.salesRankings[0]?.rank : 'N/A'}</p> */}
-            </li>
-          ))}
+      {records.length > 0 ? (
+        <table>
+          <thead>
+            <tr>
+              <th>ASIN</th>
+              <th>FNSKU</th>
+              <th>SKU</th>
+            </tr>
+          </thead>
+          <tbody>
+            {records.map((item, index) => (
+              <tr key={index}>
+                  <td>{item.asin}</td>
+                  <td>{item.fnsku}</td>
+                  <td>{item.sku}</td>
+                <div className={`${styles.gridRow} ${styles.gridSpan}`}>
+                  Title: {item['product-name']}
+                </div>
+                {/* <p>Price: {item.price ? item.price.amount : 'N/A'}</p>
+                <p>Rank: {item.salesRankings ? item.salesRankings[0]?.rank : 'N/A'}</p> */}
+              </li>
+            ))}
+          </tbody>
         </ul>
       ) : (
         <p>Loading inventory...</p>

@@ -1,10 +1,20 @@
 import { fetchAmazonAccessToken } from './amazon-auth.js'
 import axios from 'axios'
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs'
+import path from 'path'
+import { findMostRecentReportFile } from './report-finder.js'
 
 export async function getInventoryReport() {
-  const url = 'https://sellingpartnerapi-na.amazon.com/reports/2021-06-30/reports';
+  const { recentReportFilepath, recentReportDate} = findMostRecentReportFile('inventory-planning');
+  const twentyFourHours = 24 * 60 * 60 * 1000
+  console.log(recentReportDate, recentReportFilepath, new Date() - recentReportDate)
+  if ((new Date() - recentReportDate) <= (twentyFourHours) ? true : false) {
+    console.log('Returning cached file:', recentReportFilepath)
+    return fs.readFileSync(recentReportFilepath, 'utf8')
+  }
+
+  console.log('Retrieving fresh report');
+  const url = 'https://sellingpartnerapi-na.amazon.com/reports/2021-06-30/reports'
   const { accessToken } = await fetchAmazonAccessToken()
 
   const body = { reportType: 'GET_FBA_INVENTORY_PLANNING_DATA', marketplaceIds: ['ATVPDKIKX0DER'], };
@@ -45,9 +55,11 @@ export async function getInventoryReport() {
       await new Promise((resolve) => setTimeout(resolve, 10000));
     }
 
-    const report = await downloadReport(accessToken, reportDocumentId)
+    const reportText = await downloadReport(accessToken, reportDocumentId)
 
-    return report
+    writeReportTextToFile(reportDocumentId, reportText)
+
+    return reportText
 
   } catch (error) {
     console.error('Error requesting report:', error.message);
@@ -110,6 +122,7 @@ export async function downloadReport(accessToken, reportDocumentId) {
       cache: 'no-store',
     });
 
+    console.log('****reportResponse', reportResponse)
     const reportText = await reportResponse.text();
     return reportText; // The content of the report (CSV format)
   } catch (error) {
@@ -117,9 +130,10 @@ export async function downloadReport(accessToken, reportDocumentId) {
   }
 }
 
-export function writeReportTextToFile(reportDocumentId, reportText) {
-  const reportsDir = path.join(process.cwd(), 'reports');
-  const filePath = path.join(reportsDir, `report-${reportDocumentId}.txt`);
+export function writeReportTextToFile(reportText) {
+  const reportsDir = path.join(process.cwd(), 'reports', 'inventory-planning')
+  const isoDateFormattedForValidFilename = new Date().toISOString().replace(/[:.]/g, '_')
+  const filePath = path.join(reportsDir, `${isoDateFormattedForValidFilename}.tab`);
 
   if (!fs.existsSync(reportsDir)) {
     fs.mkdirSync(reportsDir, { recursive: true });
