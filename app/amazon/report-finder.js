@@ -1,5 +1,12 @@
 import fs from 'fs';
 import path from 'path';
+import { parseReport } from './report-parser.js';
+
+export function getInventoryPlanningReportRecordsByFilename(filename) {
+  const reportFilepath = path.join(process.cwd(), 'reports', 'inventory-planning', filename)
+
+  return parseReport(fs.readFileSync(reportFilepath, 'utf8'))
+}
 
 export function findMostRecentReportFile(reportType) {
   const reportDirectory = path.join(process.cwd(), 'reports', reportType)
@@ -8,7 +15,7 @@ export function findMostRecentReportFile(reportType) {
 
   if (filenames.length === 0) {
     console.log('No files found in the directory.')
-    return null
+    return {}
   }
 
   let mostRecentFile = filenames[0]
@@ -24,12 +31,12 @@ export function findMostRecentReportFile(reportType) {
 
   return {
     recentReportFilepath: path.join(reportDirectory, mostRecentFile),
-    recentReportDate: mostRecentDate
+    recentReportDate: mostRecentDate,
+    recentReportFilename: mostRecentFile
   }
 }
 
 function dateFromFilename(filename) {
   const isoDate = filename.replace(/_/g, ':').replace('.tab', '')
-  console.log('isoDate', isoDate)
   return new Date(isoDate);
 }

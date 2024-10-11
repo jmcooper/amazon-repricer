@@ -1,21 +1,30 @@
 import dotenv from 'dotenv'
-import { fetchAmazonAccessToken } from '../app/amazon/amazon-auth.js'
-import { getInventoryReport, downloadReport, writeReportTextToFile } from '../app/amazon/seller-api-reports.js'
-
+import { getInventoryAgeDataReport, getInventoryReport, downloadReport, writeReportTextToFile } from '../app/amazon/seller-api-reports.js'
+import { getOffersForAsins } from '../app/amazon/seller-api.js'
 
 dotenv.config()
 
-const reportText = await getInventoryReport()
-const formattedDate = getCurrentFormattedDate();
-writeReportTextToFile(formattedDate, reportText)
+
+getInventoryAgeDataReport();
 
 
-function getCurrentFormattedDate() {
-  const now = new Date().toISOString(); // Returns format: 2024-10-07T14:30:00.000Z
 
-  const datePart = now.slice(0, 10);  // yyyy-MM-dd
-  const timePart = now.slice(11, 16); // hh:mm
+async function getOffers() {
+  const asins = [
+    '1118073746', '1598166220',
+    '1609075811', '1640951830',
+    '1583712380', 'B0019T5H4K',
+    'B003XNBZK0', '1581572638',
+    '0692992677', '1118006720',
+    '0823056538', '1483350975',
+    '1555178790', '1591166829',
+    '1781162646', '1737900408',
+    '1629727784', '0060882085',
+    '1737900408', 'B000YQWQZ2'
+  ]
 
-  return `${datePart}-${timePart.replace(':', '-')}`;
+  const offers = await getOffersForAsins(asins)
+  console.log(offers[0].Summary.BuyBoxPrices)
 }
+
 

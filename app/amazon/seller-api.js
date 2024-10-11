@@ -1,4 +1,25 @@
-import { fetchAmazonAccessToken } from './amazon-auth'
+import axios from 'axios'
+
+import { fetchAmazonAccessToken } from './amazon-auth.js'
+
+export async function getOffersForAsins(asinsArray) {
+  const { accessToken } = await fetchAmazonAccessToken()
+
+  const uniqueAsins = [...new Set(asinsArray)]
+  const batches = chunkArray(uniqueAsins, 20)
+
+  let aggregatedResults = []
+  let first = true
+  for (const asinsBatch of batches) {
+    if (!first)
+      await delay(12000)
+    const result = await getOffersForAsinBatch(asinsBatch, accessToken)
+    aggregatedResults = aggregatedResults.concat(result)
+    first = false
+  }
+
+  return aggregatedResults
+}
 
 export async function fetchFbaInventorySummaries() {
   const usaMarketplaceId = process.env.USA_MARKETPLACE_ID;
@@ -29,6 +50,52 @@ export async function fetchFbaInventorySummaries() {
   }
 }
 
+async function getOffersForAsinBatch(asinsArrayBatch, accessToken) {
+  console.log('getting batch size', asinsArrayBatch.length)
+  const url = 'https://sellingpartnerapi-na.amazon.com/batches/products/pricing/v0/itemOffers';
+
+  const marketplaceId = process.env.USA_MARKETPLACE_ID;  // Replace with your marketplace ID (US Marketplace example)
+
+  const requestBody = {
+    requests: asinsArrayBatch.map(asin => ({
+      uri: `/products/pricing/v0/items/${asin}/offers`,
+      method: 'GET',
+      MarketplaceId: marketplaceId,
+      ItemCondition: 'Used'
+    }))
+  };
+
+  try {
+    const response = await axios.post(url, requestBody, {
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,  // Replace with your access token
+        'x-amz-access-token': accessToken,    // Replace with your Amazon access token
+        'Content-Type': 'application/json'
+      },
+    });
+
+    if (response.status !== 200) {
+      throw new Error(`Error fetching report status: ${response.statusText}`);
+    }
+
+    return response.data.responses.map(r => r.body.payload);
+
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
+
+function chunkArray(array, chunkSize) {
+  const result = []
+  for (let i = 0; i < array.length; i += chunkSize) {
+    result.push(array.slice(i, i + chunkSize))
+  }
+  return result
+}
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
 
 
 /*

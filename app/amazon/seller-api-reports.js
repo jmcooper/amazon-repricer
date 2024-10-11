@@ -4,66 +4,37 @@ import fs from 'fs'
 import path from 'path'
 import { findMostRecentReportFile } from './report-finder.js'
 
-export async function getInventoryReport() {
-  const { recentReportFilepath, recentReportDate} = findMostRecentReportFile('inventory-planning');
-  const twentyFourHours = 24 * 60 * 60 * 1000
-  console.log(recentReportDate, recentReportFilepath, new Date() - recentReportDate)
-  if ((new Date() - recentReportDate) <= (twentyFourHours) ? true : false) {
-    console.log('Returning cached file:', recentReportFilepath)
-    return fs.readFileSync(recentReportFilepath, 'utf8')
-  }
+async function getReport(reportType, cacheDir) {
+  const cachedFileInfo = findMostRecentReportFile(cacheDir);
 
-  console.log('Retrieving fresh report');
-  const url = 'https://sellingpartnerapi-na.amazon.com/reports/2021-06-30/reports'
+  const cachedReport = getCachedReport(cachedFileInfo)
+  if (cachedReport) return cachedReport
+
+  console.log(`Retrieving fresh ${cacheDir} report`);
   const { accessToken } = await fetchAmazonAccessToken()
-
-  const body = { reportType: 'GET_FBA_INVENTORY_PLANNING_DATA', marketplaceIds: ['ATVPDKIKX0DER'], };
-
   try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${accessToken}`,
-        'x-amz-access-token': accessToken,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
-      cache: 'no-store',
-    });
+    clearOffersCache()
 
-    if (!response.ok) {
-      console.log(response)
-      throw new Error(`Error requesting report: ${response.status} - ${response.statusText}`);
-    }
+    const reportId = await requestReport(reportType, accessToken)
 
-    const data = await response.json();
-    const reportId = data.reportId;
-
-    let reportStatus = 'IN_PROGRESS';
-    let reportDocumentId = null;
-
-    while (reportStatus === 'IN_PROGRESS' || reportStatus === 'IN_QUEUE') {
-      const statusResponse = await getReportStatus(accessToken, reportId)
-      reportStatus = statusResponse.processingStatus
-
-      console.log(statusResponse, reportStatus)
-      if (reportStatus === 'DONE') {
-        reportDocumentId = statusResponse.reportDocumentId;
-      } else if (reportStatus === 'FATAL') {
-        throw new Error('Report request failed with FATAL status.');
-      }
-      await new Promise((resolve) => setTimeout(resolve, 10000));
-    }
+    const reportDocumentId = await waitForReportAndReturnDocumentId(accessToken, reportId)
 
     const reportText = await downloadReport(accessToken, reportDocumentId)
 
-    writeReportTextToFile(reportDocumentId, reportText)
+    const reportFileName = writeReportTextToFile(reportDocumentId, reportText)
 
-    return reportText
-
+    return { reportText, reportFileName }
   } catch (error) {
     console.error('Error requesting report:', error.message);
   }
+}
+
+export async function getInventoryAgeDataReport() {
+  return await getReport('GET_FBA_INVENTORY_AGED_DATA', 'inventory-age')
+}
+
+export async function getInventoryReport() {
+  return await getReport('GET_FBA_INVENTORY_PLANNING_DATA', 'inventory-planning')
 }
 
 async function getReportStatus(accessToken, reportId) {
@@ -116,33 +87,105 @@ export async function downloadReport(accessToken, reportDocumentId) {
     const data = await response.json();
     const downloadUrl = data.url;
 
+    console.log('Downloading Report')
     // Fetch the actual report content from the download URL
     const reportResponse = await fetch(downloadUrl, {
       method: 'GET',
       cache: 'no-store',
     });
 
-    console.log('****reportResponse', reportResponse)
     const reportText = await reportResponse.text();
-    return reportText; // The content of the report (CSV format)
+    return reportText;
   } catch (error) {
-    console.error('Error downloading report:', error.message);
+    console.error('Error downloading report:', error.message)
   }
 }
 
-export function writeReportTextToFile(reportText) {
+export function writeReportTextToFile(reportText, extension) {
+  const ext = extension ?? 'tab'
+  console.log('Writing report to disk', reportText.substr(0, 20))
   const reportsDir = path.join(process.cwd(), 'reports', 'inventory-planning')
-  const isoDateFormattedForValidFilename = new Date().toISOString().replace(/[:.]/g, '_')
-  const filePath = path.join(reportsDir, `${isoDateFormattedForValidFilename}.tab`);
+  const isoDateFormattedForValidFilename = new Date().toISOString().replace(/[:]/g, '_')
+  const fileName = `${isoDateFormattedForValidFilename}.${ext}`
+  const filePath = path.join(reportsDir, fileName)
 
   if (!fs.existsSync(reportsDir)) {
-    fs.mkdirSync(reportsDir, { recursive: true });
+    fs.mkdirSync(reportsDir, { recursive: true })
   }
 
   try {
-    fs.writeFileSync(filePath, reportText);
-    console.log(`Report successfully written to ${filePath}`);
+    fs.writeFileSync(filePath, reportText, 'utf8')
+    return fileName
   } catch (err) {
-    console.error('Error writing the file:', err);
+    console.error('Error writing the file:', err)
+  }
+}
+
+function getCachedReport({ recentReportFilepath, recentReportDate, recentReportFilename }) {
+  const twentyFourHours = 24 * 60 * 60 * 1000
+  if ((new Date() - recentReportDate) <= (twentyFourHours) ? true : false) {
+    console.log('Returning cached file:', recentReportFilepath)
+    const reportText = fs.readFileSync(recentReportFilepath, 'utf8')
+    return { reportText, reportFileName: recentReportFilename }
+  }
+  return null
+}
+
+async function requestReport(reportType, accessToken) {
+  const url = 'https://sellingpartnerapi-na.amazon.com/reports/2021-06-30/reports'
+  const body = { reportType, marketplaceIds: ['ATVPDKIKX0DER'], };
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'x-amz-access-token': accessToken,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+    cache: 'no-store',
+  });
+
+  if (!response.ok) {
+    throw new Error(`Error requesting report: ${response.status} - ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  return data.reportId;
+}
+
+async function waitForReportAndReturnDocumentId(accessToken, reportId) {
+  let reportStatus = 'IN_PROGRESS';
+  let reportDocumentId = null;
+
+  while (reportStatus === 'IN_PROGRESS' || reportStatus === 'IN_QUEUE') {
+    const statusResponse = await getReportStatus(accessToken, reportId)
+    reportStatus = statusResponse.processingStatus
+
+    console.log(statusResponse, reportStatus)
+    reportDocumentId = statusResponse.reportDocumentId;
+    if (reportStatus === 'FATAL') {
+      throw new Error('Report request failed with FATAL status.');
+    }
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+  }
+
+  return reportDocumentId
+}
+
+function clearOffersCache() {
+  const cacheDir = path.join(process.cwd(), 'reports', 'offers-cache')
+
+  try {
+    const files = fs.readdirSync(cacheDir)
+
+    files.forEach(file => {
+      if (file.endsWith('.json')) {
+        fs.unlinkSync(path.join(cacheDir, file))
+        console.log(`${file} cache was deleted`)
+      }
+    })
+  } catch (err) {
+    console.error('Error clearing offer cache:', err)
   }
 }
