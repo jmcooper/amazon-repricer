@@ -1,3 +1,9 @@
+$primary-blue: #4682B4;
+$secondary-blue: #9eccf1;
+
+$red: red;
+$alert-red: #FFCCCC;
+
 .container {
   display: flex;
   justify-content: center;
@@ -14,7 +20,7 @@
   }
 
   .red {
-    color: red;
+    color: $red;
   }
 
   .yellow {
@@ -42,7 +48,15 @@
   }
 
   .alert {
-    background-color: #F08080;
+    background-color: $alert-red;
+
+    input {
+      background-color: $alert-red;
+
+      &:focus {
+        outline: 2px solid #FF5555;
+      }
+    }
   }
 
   .warning {
@@ -53,10 +67,8 @@
     padding-right: 10px;
   }
 
-
-
   th {
-    background-color: #4682B4;
+    background-color: $primary-blue;
     color: #ddd;
     padding: 20px 10px 20px 10px;
     text-align: left;
@@ -88,6 +100,10 @@
       max-width: 90px;
     }
 
+    a {
+      color: $secondary-blue;
+    }
+
     a:hover,
     a:visited,
     a:focus,
@@ -116,14 +132,30 @@
       text-align: center;
     }
 
+    .price {
+      color: #4682B4;
+      cursor: pointer;
+
+      &:hover {}
+    }
+
+    .sellerCentralLink {
+      margin-top: 10px;
+    }
+
     input {
       margin-top: -10px;
       padding: 10px;
+      padding-right: 3px;
       font-size: 16px;
       max-width: 75px;
       text-align: right;
       border: none;
       color: #4682B4;
+
+      &:focus {
+        padding-right: 10px;
+      }
     }
 
     &.buyBox {
@@ -150,7 +182,7 @@
   }
 
   tbody {
-    border-top: 1px solid #ddd;
+    border-top: 2px solid #ddd;
 
     tr:first-child td {
       padding-top: 15px;
@@ -158,6 +190,33 @@
 
     tr:last-child td {
       padding-bottom: 15px;
+    }
+
+    tr.alertMessage td {
+      text-align: center;
+      font-weight: bold;
+      border: 2px solid #ddd;
+      padding: 10px 20px;
+    }
+
+    tr.alertPaddingTop {
+      line-height: 0px;
+
+      td {
+        padding-top: 0
+      }
+    }
+
+    tr.alertPaddingTop {
+      line-height: 0px;
+
+      td {
+        padding-top: 0
+      }
+    }
+
+    tr.alertPaddingBottom {
+      line-height: 0px;
     }
   }
 }

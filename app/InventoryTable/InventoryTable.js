@@ -48,14 +48,6 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
       if (p['inv-age-365-plus-days'] + p['inv-age-91-to-180-days'] + p['inv-age-181-to-270-days'] + p['inv-age-271-to-365-days'] > 0) {
         newPriceInfo.newListPrice = lowestOf(twentyPercentBelowLowestFBAPrice, buyBoxPrice)
         newPriceInfo.ruleUsed = 'L20PFBA'
-        if (p['your-price'] - newOffer.myNewListPrice > 50) {
-          newPriceInfo.alertLevel = 'alert'
-        } else if (p['your-price'] - newOffer.myNewListPrice > 20) {
-          newPriceInfo.alertLevel = 'warning'
-        }
-        if (p['sales-rank'] > 1500000) {
-          newPriceInfo.alertLevel = 'alert'
-        }
       } else {
         if (p['sales-rank'] > 3000000) {
           newPriceInfo.newListPrice = lowestOf(twentyPercentBelowLowestFBAPrice, buyBoxPrice)
@@ -77,10 +69,33 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
           newPriceInfo.ruleUsed = '3LFBA'
         }
       }
+      if (!isValidNumber(newPriceInfo.newListPrice)) {
+        newPriceInfo.alertLevel = 'alert'
+        newPriceInfo.alertReason = 'Missing price'
+      }
+      else if (p['your-price'] - newOffer.myNewListPrice > 50) {
+        newPriceInfo.alertLevel = 'alert'
+        newPriceInfo.alertReason = 'Price dropped more than $50'
+      } else if (p['your-price'] - newOffer.myNewListPrice > 20) {
+        newPriceInfo.alertReason = 'Price dropped more than $20'
+        newPriceInfo.alertLevel = 'warning'
+      }
+      else if (p['sales-rank'] > 3000000) {
+        newPriceInfo.alertLevel = 'alert'
+        newPriceInfo.alertReason = 'High sales Rank'
+      }
+      else if (p['sales-rank'] > 2000000) {
+        newPriceInfo.alertLevel = 'warning'
+        newPriceInfo.alertReason = 'High sales Rank'
+      }
       acc[p.asin] = newPriceInfo
       return acc
     }, {})
     setKeyedUpdatedPrices(keyedNewPrices)
+  }
+
+  function isValidNumber(value) {
+    return typeof value === 'number' && isFinite(value);
   }
 
   function lowestOf(...args) {
@@ -98,17 +113,46 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
     setKeyedUpdatedPrices(prev => ({ ...prev, [asin]: newAsinPriceInfo }))
   }
 
-  const uparrow = (
+  function updatePrice(asin, price) {
+    setKeyedUpdatedPrices(prev => ({ ...prev, [asin]: { ...prev[asin], newListPrice: price } }))
+  }
+
+  const ascendingArrow = (
     <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-      <polygon points="50,20 90,60 10,60" fill="white" />
+      <polygon points="50,20 90,60 10,60" fill="#9eccf1" />
     </svg>
   )
 
-  const downarrow = (
+  const descendingArrow = (
     <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-      <polygon points="50,60 10,20 90,20" fill="#ddd" />
+      <polygon points="50,60 10,20 90,20" fill="#9eccf1" />
     </svg>
   )
+
+  const upArrow = (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 20" width="11" height="16">
+      <polygon points="7,0 0,10 14,10" fill="green" />
+      <rect x="4" y="10" width="6" height="10" fill="green" />
+    </svg>
+  )
+
+  const downArrow = (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 20" width="11" height="16">
+      <polygon points="7,20 0,10 14,10" fill="red" />
+      <rect x="4" y="0" width="6" height="10" fill="red" />
+    </svg>
+  )
+
+
+  function getPriceArrow(newPrice, oldPrice) {
+    if (newPrice > oldPrice)
+      return upArrow
+
+    if (newPrice < oldPrice)
+      return downArrow
+
+    return null
+  }
 
   function renderPagination() {
     const backButtonsDisabled = currentPageNumber === 1
@@ -137,7 +181,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
               <th className={styles.titleColumn}>Title</th>
               <th className={`${styles.center} ${styles.pointer}`}>
                 <Link href={`${pathName}?page=${currentPageNumber}&ageSort=${ageSortDirection === 'desc' ? 'asc' : 'desc'}`}>
-                  Max Age{ageSortDirection === 'desc' ? downarrow : uparrow}
+                  Max Age{ageSortDirection === 'desc' ? descendingArrow : ascendingArrow}
                 </Link>
               </th>
               <th className={styles.right}>Rank</th>
@@ -154,15 +198,28 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
           {
             sortedProducts.map((product, index) => (
               <tbody key={index}>
-                <tr className={getAlertLevelClass(product.asin)}>
-                  <td>{product.sku}</td>
-                  <td className={styles.titleColumn}>{product['product-name']}</td>
+                {keyedUpdatedPrices[product.asin] && keyedUpdatedPrices[product.asin].alertLevel
+                  ? <>
+                    <tr className={styles.alertPaddingTop}><td>&nbsp;</td></tr>
+                    <tr className={`${styles.alertMessage} ${getAlertLevelClass(product.asin)}`}>
+                      <td colSpan="12">{keyedUpdatedPrices[product.asin].alertReason}</td>
+                    </tr>
+                    <tr className={styles.alertPaddingBottom}><td>&nbsp;</td></tr>
+                  </>
+                  : null
+                }
+                < tr>
+                  <td><a target="_blank" href={encodeURI(`https://sellercentral.amazon.com/myinventory/inventory?searchField=sku&sku=${product.sku}`)}>{product.sku}</a></td>
+                  <td className={styles.titleColumn}>
+                    <a target="_blank" href={`https://www.amazon.com/dp/${product.asin}`}>{product['product-name']}</a>
+                  </td>
                   <td className={`${styles.center} ${getAgeColor(product)}`}>{getMaxAge(product)}</td>
                   <td className={`${styles.right} ${getSalesRankClass(product['sales-rank'])}`}>
                     {new Intl.NumberFormat('en-US').format(product['sales-rank'])}
                   </td>
                   <td>
                     <input className={styles.pointer} onChange={(e) => handlePriceChange(e, product.asin)} value={keyedUpdatedPrices?.[product.asin]?.newListPrice?.toFixed(2) || ''} />
+                    {getPriceArrow(keyedUpdatedPrices?.[product.asin]?.newListPrice, product['your-price'])}
                     <br />
                     <div className={`${styles.strike} ${styles.right} ${styles.oldPrice}`}>
                       {formatCurrency(product['your-price'])}
@@ -179,12 +236,14 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
                         <td className={styles.offers}>
                           <ul>
                             <li>({keyedOffers[product.asin].numberOfFbaOffers} offers)</li>
-                            {renderOffers(keyedOffers?.[product.asin]?.fbaOffers)}
+                            {renderOffers(keyedOffers?.[product.asin]?.fbaOffers, product.asin)}
                           </ul>
                         </td>
                         <td className={`${styles.right}`}>
                           <div className={styles.buyBox}>
-                            {formatCurrency(keyedOffers?.[product.asin]?.usedBuyBoxPrice)} (U)
+                            <span className={styles.price} onClick={(e) => updatePrice(product.asin, keyedOffers?.[product.asin]?.usedBuyBoxPrice)}>
+                              {formatCurrency(keyedOffers?.[product.asin]?.usedBuyBoxPrice)} (U)
+                            </span>
                             {keyedOffers?.[product.asin]?.wonBuyBox && <span> <Image height="25" width="25" layout="fixed" src={checkmark} alt="BuyBox Awarded" /></span>}
                           </div>
                           <div className={styles.gray}>{formatCurrency(keyedOffers?.[product.asin]?.newBuyBoxPrice)} (N)</div>
@@ -192,7 +251,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
                         <td className={styles.offers}>
                           <ul>
                             <li>({keyedOffers[product.asin].numberOfFbmOffers} offers)</li>
-                            {renderOffers(keyedOffers?.[product.asin]?.fbmOffers)}
+                            {renderOffers(keyedOffers?.[product.asin]?.fbmOffers, product.asin)}
                           </ul>
                         </td>
                       </>
@@ -219,9 +278,15 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
     else if (keyedUpdatedPrices?.[asin]?.alertLevel === 'warning')
       return styles.warning
   }
-  function renderOffers(offers) {
+  function renderOffers(offers, asin) {
     if (offers?.length > 0)
-      return offers.map((o, i) => <li key={i}>{getConditionCode(o.condition)} - {formatCurrency(o.amount)}</li>)
+      return offers.map((o, i) => (
+        <li key={i}>
+          <span className={styles.price} onClick={(e) => updatePrice(asin, o.amount)}>
+            {getConditionCode(o.condition)} - {formatCurrency(o.amount)}
+          </span>
+        </li>)
+      )
     else
       return null
   }

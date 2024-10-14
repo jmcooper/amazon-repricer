@@ -21,7 +21,9 @@ async function getReport(reportType, cacheDir) {
 
     const reportText = await downloadReport(accessToken, reportDocumentId)
 
-    const reportFileName = writeReportTextToFile(reportDocumentId, reportText)
+    const reportFileName = writeReportTextToFile(reportText, 'tab')
+
+
 
     return { reportText, reportFileName }
   } catch (error) {

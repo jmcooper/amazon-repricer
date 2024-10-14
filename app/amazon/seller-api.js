@@ -11,9 +11,16 @@ export async function getOffersForAsins(asinsArray) {
   let aggregatedResults = []
   let first = true
   for (const asinsBatch of batches) {
+    let retries = 0
     if (!first)
-      await delay(12000)
-    const result = await getOffersForAsinBatch(asinsBatch, accessToken)
+      await delay(3000)
+    let result = await getOffersForAsinBatch(asinsBatch, accessToken)
+    while (!result && retries < 2) {
+      retries++
+      console.log(`Re-fetching offers (retry # ${retries}) `)
+      await delay(13000 * retries)
+      result = await getOffersForAsinBatch(asinsBatch, accessToken)
+    }
     aggregatedResults = aggregatedResults.concat(result)
     first = false
   }
@@ -75,7 +82,7 @@ async function getOffersForAsinBatch(asinsArrayBatch, accessToken) {
     });
 
     if (response.status !== 200) {
-      throw new Error(`Error fetching report status: ${response.statusText}`);
+      throw new Error(`Error fetching offers: ${response.statusText}`);
     }
 
     return response.data.responses.map(r => r.body.payload);
