@@ -10,7 +10,7 @@ import checkmark from './checkmark.png'
 export default function InventoryTable({ products, cacheKey, pageCount }) {
   const [sortedProducts, setSortedProducts] = useState(products)
   const [keyedOffers, setKeyedOffers] = useState(null)
-  const [keyedUpdatedPrices, setKeyedUpdatedPrices] = useState({})
+  const [updatedPricesBySku, setUpdatedPricesBySku] = useState({})
   const searchParams = useSearchParams()
   const pathName = usePathname()
 
@@ -33,9 +33,8 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
   }, [products])
 
   function calculateAndSetListPrices() {
-    const keyedNewPrices = products.reduce((acc, p) => {
+    const skuKeyedNewPrices = products.reduce((acc, p) => {
       const offers = keyedOffers[p.asin]
-      const newOffer = { ...offers, alert: false, }
       const buyBoxPrice = offers?.usedBuyBoxPrice ?? null
       const twentyPercentBelowLowestFBAPrice = offers?.fbaOffers[0]?.amount * .8
       const fivePercentBelowLowestFBAPrice = offers?.fbaOffers[0]?.amount * .95
@@ -43,7 +42,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
       const secondLowestFBAPrice = offers?.fbaOffers[1]?.amount
       const thirdLowestFBAPrice = offers?.fbaOffers[2]?.amount
 
-      let newPriceInfo = { newListPrice: newOffer.myNewListPrice }
+      let newPriceInfo = { newListPrice: p['your-price'] }
 
       if (p['inv-age-365-plus-days'] + p['inv-age-91-to-180-days'] + p['inv-age-181-to-270-days'] + p['inv-age-271-to-365-days'] > 0) {
         newPriceInfo.newListPrice = lowestOf(twentyPercentBelowLowestFBAPrice, buyBoxPrice)
@@ -80,10 +79,10 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
         newPriceInfo.alertReason = 'Price dropped more than $20'
         newPriceInfo.alertLevel = 'warning'
       }
-      acc[p.asin] = newPriceInfo
+      acc[p.sku] = newPriceInfo
       return acc
     }, {})
-    setKeyedUpdatedPrices(keyedNewPrices)
+    setUpdatedPricesBySku(skuKeyedNewPrices)
   }
 
   function isValidNumber(value) {
@@ -99,14 +98,16 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
     return Math.max(...args.filter(n => !isNaN(n) && n > 0))
   }
 
-  function handlePriceChange(event, asin) {
-    const newAsinPriceInfo = { ...keyedUpdatedPrices[asin] }
-    newAsinPriceInfo.newListPrice = event.target.value
-    setKeyedUpdatedPrices(prev => ({ ...prev, [asin]: newAsinPriceInfo }))
+  function handlePriceChange(event, sku) {
+    console.log('pricechange')
+    const newSkuePriceInfo = { ...updatedPricesBySku[sku] }
+    newSkuePriceInfo.newListPrice = parseFloat(event.target.value)
+    if (isValidNumber(newSkuePriceInfo.newListPrice))
+      setUpdatedPricesBySku(prev => ({ ...prev, [sku]: newSkuePriceInfo }))
   }
 
-  function updatePrice(asin, price) {
-    setKeyedUpdatedPrices(prev => ({ ...prev, [asin]: { ...prev[asin], newListPrice: price } }))
+  function updatePrice(sku, price) {
+    setUpdatedPricesBySku(prev => ({ ...prev, [sku]: { ...prev[sku], newListPrice: price } }))
   }
 
   const ascendingArrow = (
@@ -135,6 +136,22 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
     </svg>
   )
 
+  function getPriceRuleText(rule) {
+    switch (rule) {
+      case 'L20PFBA':
+        return '20% less than the lowest FBA offer OR Buy Box, whichever is lower.'
+      case 'H20PFBA':
+        return '20% less than the lowest FBA offer OR Buy Box, whichever is higher.'
+      case '5PFBA':
+        return '5% less than the lowest FBA offer OR Buy Box, whichever is higher'
+      case 'LFBA':
+        return 'Match the lowest FBA offer OR Buy Box, whichever is higher'
+      case '2LFBA':
+        return 'Match the 2nd lowest FBA offer OR Buy Box, whichever is higher'
+      case '3LFBA':
+        return 'Match the 3rd lowest FBA offer OR Buy Box, whichever is higher'
+    }
+  }
 
   function getPriceArrow(newPrice, oldPrice) {
     if (newPrice > oldPrice)
@@ -190,11 +207,11 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
           {
             sortedProducts.map((product, index) => (
               <tbody key={index}>
-                {keyedUpdatedPrices[product.asin] && keyedUpdatedPrices[product.asin].alertLevel
+                {updatedPricesBySku[product.sku] && updatedPricesBySku[product.sku].alertLevel
                   ? <>
                     <tr className={styles.alertPaddingTop}><td>&nbsp;</td></tr>
-                    <tr className={`${styles.alertMessage} ${getAlertLevelClass(product.asin)}`}>
-                      <td colSpan="12">{keyedUpdatedPrices[product.asin].alertReason}</td>
+                    <tr className={`${styles.alertMessage} ${getAlertLevelClass(product.sku)}`}>
+                      <td colSpan="12">{updatedPricesBySku[product.sku].alertReason}</td>
                     </tr>
                     <tr className={styles.alertPaddingBottom}><td>&nbsp;</td></tr>
                   </>
@@ -210,15 +227,15 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
                     {new Intl.NumberFormat('en-US').format(product['sales-rank'])}
                   </td>
                   <td>
-                    <input className={styles.pointer} onChange={(e) => handlePriceChange(e, product.asin)} value={keyedUpdatedPrices?.[product.asin]?.newListPrice?.toFixed(2) || ''} />
-                    {getPriceArrow(keyedUpdatedPrices?.[product.asin]?.newListPrice, product['your-price'])}
+                    <input className={styles.pointer} onChange={(e) => handlePriceChange(e, product.sku)} value={updatedPricesBySku?.[product.sku]?.newListPrice?.toFixed(2) || ''} />
+                    {getPriceArrow(updatedPricesBySku?.[product.sku]?.newListPrice, product['your-price'])}
                     <br />
                     <div className={`${styles.strike} ${styles.right} ${styles.oldPrice}`}>
                       {formatCurrency(product['your-price'])}
                     </div>
                   </td>
-                  <td>
-                    {keyedUpdatedPrices?.[product.asin]?.ruleUsed}
+                  <td className={styles.pricingRule} title={getPriceRuleText(updatedPricesBySku?.[product.sku]?.ruleUsed)}>
+                    {updatedPricesBySku?.[product.sku]?.ruleUsed}
                   </td>
                   <td className={styles.spacer}>&nbsp;</td>
                   {
@@ -228,12 +245,12 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
                         <td className={styles.offers}>
                           <ul>
                             <li>({keyedOffers[product.asin].numberOfFbaOffers} offers)</li>
-                            {renderOffers(keyedOffers?.[product.asin]?.fbaOffers, product.asin)}
+                            {renderOffers(keyedOffers?.[product.asin]?.fbaOffers, product.sku)}
                           </ul>
                         </td>
                         <td className={`${styles.right}`}>
                           <div className={styles.buyBox}>
-                            <span className={styles.price} onClick={(e) => updatePrice(product.asin, keyedOffers?.[product.asin]?.usedBuyBoxPrice)}>
+                            <span className={styles.price} onClick={(e) => updatePrice(product.sku, keyedOffers?.[product.asin]?.usedBuyBoxPrice)}>
                               {formatCurrency(keyedOffers?.[product.asin]?.usedBuyBoxPrice)} (U)
                             </span>
                             {keyedOffers?.[product.asin]?.wonBuyBox && <span> <Image height="25" width="25" layout="fixed" src={checkmark} alt="BuyBox Awarded" /></span>}
@@ -243,7 +260,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
                         <td className={styles.offers}>
                           <ul>
                             <li>({keyedOffers[product.asin].numberOfFbmOffers} offers)</li>
-                            {renderOffers(keyedOffers?.[product.asin]?.fbmOffers, product.asin)}
+                            {renderOffers(keyedOffers?.[product.asin]?.fbmOffers, product.sku)}
                           </ul>
                         </td>
                       </>
@@ -264,17 +281,17 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
     </>
   )
 
-  function getAlertLevelClass(asin) {
-    if (keyedUpdatedPrices?.[asin]?.alertLevel === 'alert')
+  function getAlertLevelClass(sku) {
+    if (updatedPricesBySku?.[sku]?.alertLevel === 'alert')
       return styles.alert
-    else if (keyedUpdatedPrices?.[asin]?.alertLevel === 'warning')
+    else if (updatedPricesBySku?.[sku]?.alertLevel === 'warning')
       return styles.warning
   }
-  function renderOffers(offers, asin) {
+  function renderOffers(offers, sku) {
     if (offers?.length > 0)
       return offers.map((o, i) => (
         <li key={i}>
-          <span className={styles.price} onClick={(e) => updatePrice(asin, o.amount)}>
+          <span className={styles.price} onClick={(e) => updatePrice(sku, o.amount)}>
             {getConditionCode(o.condition)} - {formatCurrency(o.amount)}
           </span>
         </li>)

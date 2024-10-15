@@ -132,6 +132,10 @@ $alert-red: #FFCCCC;
       text-align: center;
     }
 
+    &.pricingRule {
+      cursor: pointer;
+    }
+
     .price {
       color: #4682B4;
       cursor: pointer;
