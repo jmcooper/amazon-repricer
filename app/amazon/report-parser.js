@@ -16,7 +16,9 @@ function convertTypes(r) {
     'inv-age-365-plus-days',
     'inv-age-91-to-180-days',
     'inv-age-181-to-270-days',
-    'inv-age-271-to-365-days'
+    'inv-age-271-to-365-days',
+    'available',
+    'inbound-quantity'
   ]
 
   const floats = [

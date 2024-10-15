@@ -73,20 +73,12 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
         newPriceInfo.alertLevel = 'alert'
         newPriceInfo.alertReason = 'Missing price'
       }
-      else if (p['your-price'] - newOffer.myNewListPrice > 50) {
+      else if (p['your-price'] - newPriceInfo.newListPrice > 50) {
         newPriceInfo.alertLevel = 'alert'
         newPriceInfo.alertReason = 'Price dropped more than $50'
-      } else if (p['your-price'] - newOffer.myNewListPrice > 20) {
+      } else if (p['your-price'] - newPriceInfo.newListPrice > 20) {
         newPriceInfo.alertReason = 'Price dropped more than $20'
         newPriceInfo.alertLevel = 'warning'
-      }
-      else if (p['sales-rank'] > 3000000) {
-        newPriceInfo.alertLevel = 'alert'
-        newPriceInfo.alertReason = 'High sales Rank'
-      }
-      else if (p['sales-rank'] > 2000000) {
-        newPriceInfo.alertLevel = 'warning'
-        newPriceInfo.alertReason = 'High sales Rank'
       }
       acc[p.asin] = newPriceInfo
       return acc
