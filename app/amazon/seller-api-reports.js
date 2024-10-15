@@ -23,8 +23,6 @@ async function getReport(reportType, cacheDir) {
 
     const reportFileName = writeReportTextToFile(reportText, 'tab')
 
-
-
     return { reportText, reportFileName }
   } catch (error) {
     console.error('Error requesting report:', error.message);

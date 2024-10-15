@@ -3,18 +3,20 @@ import fs from 'fs'
 import path from 'path'
 import { getOffersForAsins } from "./amazon/seller-api"
 
-export async function getOffers(records, pageNumberForCaching, sortOrderForCaching) {
-  const pageNumber = pageNumberForCaching ?? 1
-  const sortOrder = sortOrderForCaching ?? 'desc'
-  const cachedOffers = getRecentlyCachedOffers(pageNumber, sortOrder)
+export async function getOffers(asins) {
+  const cachedOffers = getRecentlyCachedOffers()
 
-  if (cachedOffers) return cachedOffers;
+  const asinsWithNoCachedOffers = asins.filter(a => !cachedOffers[a])
 
-  const offers = await getOffersForAsins(records.map(r => r.asin))
-  const keyedOffers = offers.filter(o => !!o)
+  if (asinsWithNoCachedOffers.length === 0)
+    return cachedOffers
+
+  const fetchedOffers = await getOffersForAsins(asinsWithNoCachedOffers)
+  const keyedOffers = fetchedOffers.filter(o => !!o)
     .reduce((acc, o) => { acc[o.ASIN] = transformOffer(o); return acc; }, {})
 
-  cacheKeyedOffers(keyedOffers, pageNumber, sortOrderForCaching)
+  const allOffers = { ...cachedOffers, ...keyedOffers }
+  cacheOffers(allOffers)
 
   return keyedOffers
 }
@@ -60,9 +62,9 @@ function transformOffer(offer) {
   }
 }
 
-function getRecentlyCachedOffers(pageNumberForCaching, sortOrderForCaching) {
-  const cacheFilepathForPage = path.join(process.cwd(), 'reports', 'offers-cache', `page${pageNumberForCaching}-sort${sortOrderForCaching}-cache.json`)
-  let cachedOffers = null
+function getRecentlyCachedOffers() {
+  const cacheFilepathForPage = path.join(process.cwd(), 'reports', `offers-cache.json`)
+  let cachedOffers = {}
   try {
     const stats = fs.statSync(cacheFilepathForPage)
     const fileAgeInHours = (Date.now() - new Date(stats.mtime).getTime()) / (1000 * 60 * 60)
@@ -73,12 +75,13 @@ function getRecentlyCachedOffers(pageNumberForCaching, sortOrderForCaching) {
     return cachedOffers
   }
   catch {
-    //No file cache available
-    return null
+    return {}
   }
 }
 
-function cacheKeyedOffers(keyedOffers, pageNumberForCaching, sortOrderForCaching) {
-  const cacheFilepathForPage = path.join(process.cwd(), 'reports', 'offers-cache', `page${pageNumberForCaching}-sort${sortOrderForCaching}-cache.json`)
+function cacheOffers(keyedOffers) {
+  if (!keyedOffers || Object.keys(keyedOffers).length === 0) return
+
+  const cacheFilepathForPage = path.join(process.cwd(), 'reports', 'offers-cache.json')
   fs.writeFileSync(cacheFilepathForPage, JSON.stringify(keyedOffers), 'utf8')
 }

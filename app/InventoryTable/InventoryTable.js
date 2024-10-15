@@ -25,7 +25,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
 
   useEffect(() => {
     async function fetchOffers() {
-      const keyedOffersObject = await getOffers(products, currentPageNumber, ageSortDirection)
+      const keyedOffersObject = await getOffers(products.map(p => p.asin))
       setKeyedOffers(keyedOffersObject)
     }
     setSortedProducts(products)

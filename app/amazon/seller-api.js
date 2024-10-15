@@ -13,7 +13,7 @@ export async function getOffersForAsins(asinsArray) {
   for (const asinsBatch of batches) {
     let retries = 0
     if (!first)
-      await delay(3000)
+      await delay(6000)
     let result = await getOffersForAsinBatch(asinsBatch, accessToken)
     while (!result && retries < 2) {
       retries++
