@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 import { fetchAmazonAccessToken } from './amazon-auth.js'
+import { chunkArray } from './utils.js'
 
 export async function getOffersForAsins(asinsArray) {
   const { accessToken } = await fetchAmazonAccessToken()
@@ -92,12 +93,36 @@ async function getOffersForAsinBatch(asinsArrayBatch, accessToken) {
   }
 }
 
-function chunkArray(array, chunkSize) {
-  const result = []
-  for (let i = 0; i < array.length; i += chunkSize) {
-    result.push(array.slice(i, i + chunkSize))
+export async function updateItemPrice(sku, newPrice) {
+
+  const { accessToken } = await fetchAmazonAccessToken()
+
+  const url = encodeURI(`https://sellingpartnerapi-na.amazon.com/listings/2021-08-01/items/${process.env.SELLER_ID}/${sku}/pricing?marketplaceIds=${process.env.USA_MARKETPLACE_ID}`)
+
+  const body = {
+    pricing: {
+      listingPrice: {
+        currencyCode: "USD", // Adjust based on currency
+        amount: newPrice
+      }
+    }
   }
-  return result
+
+  const response = await axios.put(url, body, {
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'x-amz-access-token': accessToken,
+      'Content-Type': 'application/json',
+      'x-amz-marketplace-id': process.env.USA_MARKETPLACE_ID
+    },
+  })
+
+  const data = await response.json()
+  if (!response.ok) {
+    throw new Error(`Error updating price: ${data.errors[0]}`)
+  }
+
+  return data
 }
 
 function delay(ms) {

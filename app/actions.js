@@ -3,6 +3,12 @@ import fs from 'fs'
 import path from 'path'
 import { getOffersForAsins } from "./amazon/seller-api"
 
+export async function priceItems(updatedPricesBySku) {
+  console.log("Updating prices for skus", updatedPricesBySku.map(p => p.sku), updatedPricesBySku.map(p => p.priceData))
+  await new Promise(resolve => setTimeout(resolve, 3000))
+  return updatedPricesBySku.map(p => ({ sku: p.sku, success: true }))
+}
+
 export async function getOffers(asins) {
   const cachedOffers = getRecentlyCachedOffers()
 

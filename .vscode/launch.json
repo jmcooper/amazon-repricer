@@ -28,7 +28,7 @@
       "name": "Adhocs",
       "type": "node-terminal",
       "request": "launch",
-      "command": "node ./adhocs/getReport.js"
+      "command": "node ./adhocs/updateItemPrice.js"
     },
   ]
 }

@@ -4,8 +4,9 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './InventoryTable.module.scss'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { getOffers } from '../actions'
+import { getOffers, priceItems } from '../actions'
 import checkmark from './checkmark.png'
+import { chunkArray } from "../amazon/utils";
 
 export default function InventoryTable({ products, cacheKey, pageCount }) {
   const [sortedProducts, setSortedProducts] = useState(products)
@@ -44,7 +45,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
       const fourthLowestFBAPrice = offers?.fbaOffers[3]?.amount ?? thirdLowestFBAPrice
       const highestFBAPrice = offers?.fbaOffers[offers?.fbaOffers.length - 1]?.amount
 
-      let newPriceInfo = { newListPrice: p['your-price'] }
+      let newPriceInfo = { newListPrice: p['your-price'], priceUpdateStatus: 'idle' }
 
       if (!lowestFBAPrice && !buyBoxPrice) {
         newPriceInfo.alertLevel = 'alert'
@@ -95,6 +96,38 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
       return acc
     }, {})
     setUpdatedPricesBySku(skuKeyedNewPrices)
+  }
+
+  function handlePricePage() {
+    const priceUpdateData = Object.keys(updatedPricesBySku).map(key => ({
+      sku: key,
+      priceData: updatedPricesBySku[key]
+    }))
+    const priceUpdateBatches = chunkArray(priceUpdateData, 5)
+    priceUpdateBatches.forEach(async batch => {
+      setUpdatedPricesBySku(prev => setUpdatingStatusForItems(prev, batch))
+      const batchResult = await priceItems(batch)
+      setUpdatedPricesBySku(prev => setUpdatedStatusForItems(prev, batchResult))
+    })
+  }
+
+  function setUpdatingStatusForItems(prevState, batchResult) {
+    const updatedItems = { ...prevState }
+    batchResult.forEach(batchItem => {
+      if (updatedItems[batchItem.sku])
+        updatedItems[batchItem.sku].priceUpdateStatus = 'updating'
+    })
+    return updatedItems
+  }
+
+  function setUpdatedStatusForItems(prevState, batchResult) {
+    {
+      const updated = { ...prevState }
+      batchResult.forEach(r => {
+        updated[r.sku].priceUpdateStatus = r.success ? 'updated' : 'failed'
+      })
+      return updated
+    }
   }
 
   function isValidNumber(value) {
@@ -151,6 +184,17 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
     </svg>
   )
 
+  const greenCheckmark = < svg width="19" height="19" xmlns="http://www.w3.org/2000/svg" >
+    <circle cx="10" cy="10" r="8" stroke="green" strokeWidth="1.5" fill="rgba(0, 128, 0, 0.2)" />
+    <path d="M6 10 L9 13 L14 7" stroke="green" strokeWidth="1.5" fill="none" />
+  </svg >
+
+  const redX = <svg width="19" height="19" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="8" stroke="red" strokeWidth="1.5" fill="rgba(255, 0, 0, 0.2)" />
+    <line x1="6" y1="6" x2="14" y2="14" stroke="red" strokeWidth="1.5" />
+    <line x1="14" y1="6" x2="6" y2="14" stroke="red" strokeWidth="1.5" />
+  </svg>
+
   function getPriceRuleText(rule) {
     switch (rule) {
       case 'L20PFBA':
@@ -178,6 +222,15 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
     return null
   }
 
+  function getPriceInputClass(sku) {
+    if (updatedPricesBySku?.[sku]?.priceUpdateStatus === 'updated')
+      return styles.priceUpdateSucceeded
+    else if (updatedPricesBySku?.[sku]?.priceUpdateStatus === 'updated')
+      return styles.priceUpdateSucceeded
+    else if (updatedPricesBySku?.[sku]?.priceUpdateStatus === 'failed')
+      return styles.priceUpdateFailed
+  }
+
   function renderPagination() {
     const backButtonsDisabled = currentPageNumber === 1
     const forwardButtonsDisabled = currentPageNumber === pageCount
@@ -197,6 +250,9 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
   return (
     <>
       {renderPagination()}
+      <div className={styles.pricePage}>
+        <button onClick={handlePricePage}>Price Page</button>
+      </div>
       <div className={styles.container}>
         <table className={styles.table}>
           <thead>
@@ -232,7 +288,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
                   </>
                   : null
                 }
-                < tr>
+                <tr className={updatedPricesBySku?.[product.sku]?.priceUpdateStatus === 'updating' ? styles.updatingPrice : null}>
                   <td><a target="_blank" href={encodeURI(`https://sellercentral.amazon.com/myinventory/inventory?searchField=sku&sku=${product.sku}`)}>{product.sku}</a></td>
                   <td className={styles.titleColumn}>
                     <a target="_blank" href={`https://www.amazon.com/dp/${product.asin}`}>{product['product-name']}</a>
@@ -241,13 +297,21 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
                   <td className={`${styles.right} ${getSalesRankClass(product['sales-rank'])}`}>
                     {new Intl.NumberFormat('en-US').format(product['sales-rank'])}
                   </td>
-                  <td>
-                    <input className={styles.pointer} onChange={(e) => handlePriceChange(e, product.sku)} value={updatedPricesBySku?.[product.sku]?.newListPrice?.toFixed(2) || ''} />
-                    {getPriceArrow(updatedPricesBySku?.[product.sku]?.newListPrice, product['your-price'])}
-                    <br />
+                  <td className={styles.priceCell}>
+                    <div>
+                      <input className={`${styles.pointer} ${getPriceInputClass(product.sku)}`} onChange={(e) => handlePriceChange(e, product.sku)} value={updatedPricesBySku?.[product.sku]?.newListPrice?.toFixed(2) || ''} />
+                      {updatedPricesBySku?.[product.sku]?.priceUpdateStatus === 'updated'
+                        ? greenCheckmark
+                        : updatedPricesBySku?.[product.sku]?.priceUpdateStatus === 'failed' ? redX : null}
+                      {getPriceArrow(updatedPricesBySku?.[product.sku]?.newListPrice, product['your-price'])}
+                    </div>
                     <div className={`${styles.strike} ${styles.right} ${styles.oldPrice}`}>
                       {formatCurrency(product['your-price'])}
                     </div>
+                    {updatedPricesBySku?.[product.sku]?.priceUpdateStatus === 'updating'
+                      ? <div className={styles.updatingMessage}>Updating Price...</div>
+                      : null
+                    }
                   </td>
                   <td className={styles.pricingRule} title={getPriceRuleText(updatedPricesBySku?.[product.sku]?.ruleUsed)}>
                     {updatedPricesBySku?.[product.sku]?.ruleUsed}
@@ -291,7 +355,9 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
           }
         </table >
       </div >
-
+      <div className={styles.pricePage}>
+        <button onClick={handlePricePage}>Price Page</button>
+      </div>
       {renderPagination()}
     </>
   )
