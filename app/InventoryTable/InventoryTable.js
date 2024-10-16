@@ -39,12 +39,18 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
       const twentyPercentBelowLowestFBAPrice = offers?.fbaOffers[0]?.amount * .8
       const fivePercentBelowLowestFBAPrice = offers?.fbaOffers[0]?.amount * .95
       const lowestFBAPrice = offers?.fbaOffers[0]?.amount
-      const secondLowestFBAPrice = offers?.fbaOffers[1]?.amount
-      const thirdLowestFBAPrice = offers?.fbaOffers[2]?.amount
+      const secondLowestFBAPrice = offers?.fbaOffers[1]?.amount ?? lowestFBAPrice
+      const thirdLowestFBAPrice = offers?.fbaOffers[2]?.amount ?? secondLowestFBAPrice
+      const fourthLowestFBAPrice = offers?.fbaOffers[3]?.amount ?? thirdLowestFBAPrice
+      const highestFBAPrice = offers?.fbaOffers[offers?.fbaOffers.length - 1]?.amount
 
       let newPriceInfo = { newListPrice: p['your-price'] }
 
-      if (p['inv-age-365-plus-days'] + p['inv-age-91-to-180-days'] + p['inv-age-181-to-270-days'] + p['inv-age-271-to-365-days'] > 0) {
+      if (!lowestFBAPrice && !buyBoxPrice) {
+        newPriceInfo.alertLevel = 'alert'
+        newPriceInfo.alertReason = 'Not Enough Offer Data'
+      }
+      else if (p['inv-age-365-plus-days'] + p['inv-age-91-to-180-days'] + p['inv-age-181-to-270-days'] + p['inv-age-271-to-365-days'] > 0) {
         newPriceInfo.newListPrice = lowestOf(twentyPercentBelowLowestFBAPrice, buyBoxPrice)
         newPriceInfo.ruleUsed = 'L20PFBA'
       } else {
@@ -66,6 +72,12 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
         } else {
           newPriceInfo.newListPrice = highestOf(thirdLowestFBAPrice, buyBoxPrice)
           newPriceInfo.ruleUsed = '3LFBA'
+        }
+        if (p['sales-rank'] < 1000000) {
+          if (highestFBAPrice - lowestFBAPrice > 20 || fourthLowestFBAPrice - lowestFBAPrice > 10) {
+            newPriceInfo.alertLevel = 'warning'
+            newPriceInfo.alertReason = 'Check for gap in FBA Offers'
+          }
         }
       }
       if (!isValidNumber(newPriceInfo.newListPrice)) {
@@ -90,12 +102,15 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
   }
 
   function lowestOf(...args) {
-    const lowest = Math.min(...args.filter(n => !isNaN(n) && n > 0))
+    const values = args.filter(a => !!a)
+    const lowest = Math.min(...values.filter(n => !isNaN(n) && n > 0))
     return Math.max(lowest, 9)
   }
 
   function highestOf(...args) {
-    return Math.max(...args.filter(n => !isNaN(n) && n > 0))
+    const values = args.filter(a => !!a)
+    const highest = Math.max(...values.filter(n => !isNaN(n) && n > 0))
+    return Math.max(highest, 9)
   }
 
   function handlePriceChange(event, sku) {
