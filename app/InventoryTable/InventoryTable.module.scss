@@ -158,6 +158,7 @@ $alert-red: #FFCCCC;
 
     .priceUpdateFailed {
       background-color: rgba(128, 0, 0, 0.8);
+      color: #ddd;
       border: 1px solid rgba(225, 0, 0, 0.8);
     }
 
@@ -165,7 +166,10 @@ $alert-red: #FFCCCC;
     .updatingMessage {
       position: absolute;
       padding: 25px 100px;
-      top: 15px;
+      border: 1px solid #999;
+      border-radius: 8px;
+      background-color: rgba(51, 51, 51, 0.9);
+      top: 10px;
       left: -125px;
       width: 125px;
       color: white;

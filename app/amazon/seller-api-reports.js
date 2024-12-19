@@ -174,17 +174,11 @@ async function waitForReportAndReturnDocumentId(accessToken, reportId) {
 }
 
 function clearOffersCache() {
-  const cacheDir = path.join(process.cwd(), 'reports', 'offers-cache')
+  const cacheFilepath = path.join(process.cwd(), 'reports', 'offers-cache.json')
 
   try {
-    const files = fs.readdirSync(cacheDir)
-
-    files.forEach(file => {
-      if (file.endsWith('.json')) {
-        fs.unlinkSync(path.join(cacheDir, file))
-        console.log(`${file} cache was deleted`)
-      }
-    })
+    fs.unlinkSync(cacheFilepath)
+    console.log(`${cacheFilepath} cache was deleted`)
   } catch (err) {
     console.error('Error clearing offer cache:', err)
   }

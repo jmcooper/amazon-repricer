@@ -94,21 +94,39 @@ async function getOffersForAsinBatch(asinsArrayBatch, accessToken) {
 }
 
 export async function updateItemPrice(sku, newPrice) {
-
   const { accessToken } = await fetchAmazonAccessToken()
+  const url = encodeURI(`https://sellingpartnerapi-na.amazon.com/listings/2021-08-01/items/${process.env.SELLER_ID}/${sku}?marketplaceIds=${process.env.USA_MARKETPLACE_ID}&issueLocale=en_US`)
+  const body = buildBodyForPriceUpdateRequest(newPrice)
 
-  const url = encodeURI(`https://sellingpartnerapi-na.amazon.com/listings/2021-08-01/items/${process.env.SELLER_ID}/${sku}/pricing?marketplaceIds=${process.env.USA_MARKETPLACE_ID}`)
-
-  const body = {
-    pricing: {
-      listingPrice: {
-        currencyCode: "USD", // Adjust based on currency
-        amount: newPrice
+  let response = { data: { status: '' } }
+  let retries = 0
+  try {
+    while (response.data.status !== 'ACCEPTED' && retries < 3) {
+      if (retries > 0) await delay(5000 * retries)
+      try {
+        retries++
+        if (retries > 1) console.log(`Retrying price update for ${sku}. Retry # ${retries}`)
+        response = await attemptPriceUpdate(url, body, accessToken)
+      }
+      catch (err) {
+        console.log(`Error updating price for ${sku}`, err.code, err.status, err.message)
+        if (retries > 2) throw err
       }
     }
-  }
 
-  const response = await axios.put(url, body, {
+    if (response.data.status !== 'ACCEPTED') {
+      return { sku, success: false }
+    }
+
+    return { sku, success: true }
+  } catch (err) {
+    console.log('Error Updating Item Price', err.code, err.status, err.message)
+    return { sku, success: false }
+  }
+}
+
+async function attemptPriceUpdate(url, body, accessToken) {
+  return await axios.patch(url, body, {
     headers: {
       'Authorization': `Bearer ${accessToken}`,
       'x-amz-access-token': accessToken,
@@ -116,21 +134,31 @@ export async function updateItemPrice(sku, newPrice) {
       'x-amz-marketplace-id': process.env.USA_MARKETPLACE_ID
     },
   })
-
-  const data = await response.json()
-  if (!response.ok) {
-    throw new Error(`Error updating price: ${data.errors[0]}`)
+}
+function buildBodyForPriceUpdateRequest(newPrice) {
+  return {
+    productType: 'ABIS_BOOK',
+    patches: [
+      {
+        op: 'replace',
+        path: '/attributes/purchasable_offer',
+        value: [
+          {
+            audience: "ALL",
+            marketplace_id: process.env.USA_MARKETPLACE_ID,
+            currency: "USD",
+            our_price: [{ schedule: [{ value_with_tax: newPrice }] }]
+          }
+        ]
+      }
+    ]
   }
-
-  return data
 }
 
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-
-/*
 export async function getInventory() {
   const { accessToken } = await fetchAmazonAccessToken();
 
@@ -140,15 +168,7 @@ export async function getInventory() {
   }
 
   // Example: Call the Listings Items API to get SKU, Title, Price, etc.
-  const inventoryPath = `/listings/2021-08-01/items?marketplaceIds=${process.env.AMAZON_SELLER_ID}`; // Use appropriate marketplace ID
-  return await makeSellerPortalApiRequest(accessToken, inventoryPath);
-}
-
-// Function to make signed SP-API request using AWS signature v4
-async function makeSellerPortalApiRequest(accessToken, path, method = 'GET') {
-  const host = 'sellingpartnerapi-na.amazon.com';
-
-  const url = `https://${host}${path}`;
+  const url = `https://sellingpartnerapi-na.amazon.com/listings/2021-08-01/items?marketplaceIds=${process.env.USA_MARKETPLACE_ID}&includedData=issues,attributes,summaries,offers,fulfillmentAvailability`;
 
   const headers = {
     'x-amz-access-token': accessToken,
@@ -180,4 +200,3 @@ async function makeSellerPortalApiRequest(accessToken, path, method = 'GET') {
     console.error('Error making SP-API request:', error);
   }
 }
-*/

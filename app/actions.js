@@ -1,12 +1,19 @@
 'use server'
 import fs from 'fs'
 import path from 'path'
-import { getOffersForAsins } from "./amazon/seller-api"
+import { getOffersForAsins, updateItemPrice } from "./amazon/seller-api"
 
-export async function priceItems(updatedPricesBySku) {
-  console.log("Updating prices for skus", updatedPricesBySku.map(p => p.sku), updatedPricesBySku.map(p => p.priceData))
-  await new Promise(resolve => setTimeout(resolve, 3000))
-  return updatedPricesBySku.map(p => ({ sku: p.sku, success: true }))
+export async function updateItemPrices(updatedPrices) {
+  console.log('Updating prices for batch')
+  const priceUpdatePromises = updatedPrices.map(item => updateItemPrice(item.sku, item.price))
+  try {
+    const results = await Promise.all(priceUpdatePromises)
+    console.log('All prices updated:', results)
+    return results
+
+  } catch (error) {
+    console.error('Error updating prices:', error)
+  }
 }
 
 export async function getOffers(asins) {

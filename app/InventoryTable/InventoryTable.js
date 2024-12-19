@@ -4,11 +4,11 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './InventoryTable.module.scss'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { getOffers, priceItems } from '../actions'
+import { getOffers, updateItemPrices } from '../actions'
 import checkmark from './checkmark.png'
 import { chunkArray } from "../amazon/utils";
 
-export default function InventoryTable({ products, cacheKey, pageCount }) {
+export default function InventoryTable({ products, pageCount }) {
   const [sortedProducts, setSortedProducts] = useState(products)
   const [keyedOffers, setKeyedOffers] = useState(null)
   const [updatedPricesBySku, setUpdatedPricesBySku] = useState({})
@@ -20,7 +20,22 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
 
   useEffect(() => {
     if (keyedOffers) {
-      calculateAndSetListPrices()
+      const newUpdatedPricesBySku = calculateAndSetListPrices()
+      products.sort(sortAlertsToTop)
+      setSortedProducts(products)
+
+      function sortAlertsToTop(a, b) {
+        const alertSortA = getAlertLevelSort(newUpdatedPricesBySku[a.sku]?.alertLevel)
+        const alertSortB = getAlertLevelSort(newUpdatedPricesBySku[b.sku]?.alertLevel)
+        return alertSortA - alertSortB
+      }
+
+      function getAlertLevelSort(alertLevel) {
+        if (alertLevel === 'alert') return -2
+        else if (alertLevel === 'warning') return -1
+        else return 0
+      }
+
     }
   }, [keyedOffers])
 
@@ -29,9 +44,9 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
       const keyedOffersObject = await getOffers(products.map(p => p.asin))
       setKeyedOffers(keyedOffersObject)
     }
-    setSortedProducts(products)
     fetchOffers()
   }, [products])
+
 
   function calculateAndSetListPrices() {
     const skuKeyedNewPrices = products.reduce((acc, p) => {
@@ -40,10 +55,14 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
       const twentyPercentBelowLowestFBAPrice = offers?.fbaOffers[0]?.amount * .8
       const fivePercentBelowLowestFBAPrice = offers?.fbaOffers[0]?.amount * .95
       const lowestFBAPrice = offers?.fbaOffers[0]?.amount
-      const secondLowestFBAPrice = offers?.fbaOffers[1]?.amount ?? lowestFBAPrice
-      const thirdLowestFBAPrice = offers?.fbaOffers[2]?.amount ?? secondLowestFBAPrice
-      const fourthLowestFBAPrice = offers?.fbaOffers[3]?.amount ?? thirdLowestFBAPrice
-      const highestFBAPrice = offers?.fbaOffers[offers?.fbaOffers.length - 1]?.amount
+      let secondLowestFBAPrice = offers?.fbaOffers[1]?.amount ?? lowestFBAPrice
+      let thirdLowestFBAPrice = offers?.fbaOffers[2]?.amount ?? secondLowestFBAPrice
+      let fourthLowestFBAPrice = offers?.fbaOffers[3]?.amount ?? thirdLowestFBAPrice
+      let highestFBAPrice = offers?.fbaOffers[offers?.fbaOffers.length - 1]?.amount
+
+      if (secondLowestFBAPrice - lowestFBAPrice < 1) secondLowestFBAPrice = lowestFBAPrice
+      if (thirdLowestFBAPrice - secondLowestFBAPrice < 1) thirdLowestFBAPrice = secondLowestFBAPrice
+      if (fourthLowestFBAPrice - thirdLowestFBAPrice < 1) fourthLowestFBAPrice = thirdLowestFBAPrice
 
       let newPriceInfo = { newListPrice: p['your-price'], priceUpdateStatus: 'idle' }
 
@@ -96,23 +115,30 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
       return acc
     }, {})
     setUpdatedPricesBySku(skuKeyedNewPrices)
+    return skuKeyedNewPrices
   }
 
-  function handlePricePage() {
+  async function handlePricePage() {
     const priceUpdateData = Object.keys(updatedPricesBySku).map(key => ({
       sku: key,
-      priceData: updatedPricesBySku[key]
+      price: updatedPricesBySku[key].newListPrice
     }))
     const priceUpdateBatches = chunkArray(priceUpdateData, 5)
-    priceUpdateBatches.forEach(async batch => {
+    for (const batch of priceUpdateBatches) {
       setUpdatedPricesBySku(prev => setUpdatingStatusForItems(prev, batch))
-      const batchResult = await priceItems(batch)
+      const batchResult = await updateItemPrices(batch)
+      await delay(5000)
       setUpdatedPricesBySku(prev => setUpdatedStatusForItems(prev, batchResult))
-    })
+    }
   }
 
-  function setUpdatingStatusForItems(prevState, batchResult) {
-    const updatedItems = { ...prevState }
+  function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+
+
+  function setUpdatingStatusForItems(prevUpdatedPricesBySkuState, batchResult) {
+    const updatedItems = { ...prevUpdatedPricesBySkuState }
     batchResult.forEach(batchItem => {
       if (updatedItems[batchItem.sku])
         updatedItems[batchItem.sku].priceUpdateStatus = 'updating'
@@ -123,8 +149,8 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
   function setUpdatedStatusForItems(prevState, batchResult) {
     {
       const updated = { ...prevState }
-      batchResult.forEach(r => {
-        updated[r.sku].priceUpdateStatus = r.success ? 'updated' : 'failed'
+      batchResult.forEach(result => {
+        updated[result.sku].priceUpdateStatus = result.success ? 'updated' : 'failed'
       })
       return updated
     }
@@ -148,10 +174,10 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
 
   function handlePriceChange(event, sku) {
     console.log('pricechange')
-    const newSkuePriceInfo = { ...updatedPricesBySku[sku] }
-    newSkuePriceInfo.newListPrice = parseFloat(event.target.value)
-    if (isValidNumber(newSkuePriceInfo.newListPrice))
-      setUpdatedPricesBySku(prev => ({ ...prev, [sku]: newSkuePriceInfo }))
+    const newSkuPriceInfo = { ...updatedPricesBySku[sku] }
+    newSkuPriceInfo.newListPrice = parseFloat(event.target.value)
+    if (isValidNumber(newSkuPriceInfo.newListPrice))
+      setUpdatedPricesBySku(prev => ({ ...prev, [sku]: newSkuPriceInfo }))
   }
 
   function updatePrice(sku, price) {
@@ -251,7 +277,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
     <>
       {renderPagination()}
       <div className={styles.pricePage}>
-        <button onClick={handlePricePage}>Price Page</button>
+        <button onClick={async () => { handlePricePage() }}>Price Page</button>
       </div>
       <div className={styles.container}>
         <table className={styles.table}>
@@ -291,7 +317,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
                 <tr className={updatedPricesBySku?.[product.sku]?.priceUpdateStatus === 'updating' ? styles.updatingPrice : null}>
                   <td><a target="_blank" href={encodeURI(`https://sellercentral.amazon.com/myinventory/inventory?searchField=sku&sku=${product.sku}`)}>{product.sku}</a></td>
                   <td className={styles.titleColumn}>
-                    <a target="_blank" href={`https://www.amazon.com/dp/${product.asin}`}>{product['product-name']}</a>
+                    <a target="_sellercentral" href={`https://www.amazon.com/dp/${product.asin}`}>{product['product-name']}</a>
                   </td>
                   <td className={`${styles.center} ${getAgeColor(product)}`}>{getMaxAge(product)}</td>
                   <td className={`${styles.right} ${getSalesRankClass(product['sales-rank'])}`}>
@@ -356,7 +382,7 @@ export default function InventoryTable({ products, cacheKey, pageCount }) {
         </table >
       </div >
       <div className={styles.pricePage}>
-        <button onClick={handlePricePage}>Price Page</button>
+        <button onClick={async () => { handlePricePage() }}>Price Page</button>
       </div>
       {renderPagination()}
     </>
